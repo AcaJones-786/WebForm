@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="images/IMM.png" alt="">
+        <h1>Registration Form <span>{Year}</span></h1>
+        <form action="">
+            <p>Are you a new student?</p>
+            <ul>
+                <li>
+                    <label for="newStudrad">New Student</label>
+                    <input type="radio" name="student_type" id="newStudrad">
+                </li>
+                <li>
+                    <label for="renewStudrad">Renewal Student</label>
+                    <input type="radio" name="student_type" id="renewStudrad">
+                </li>
+                <li>
+                    <label for="studNo">Enter student number:</label>
+                    <input type="number" name="studNo" id="studNoIpt" maxlength="6">
+                </li>
+                <li>
+                    <label for="sem">Which semester are you registering for?</label>
+                    <select name="sem" id="sem">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </li>
+            </ul>
+        </form>
+    </header>
+
+    <div class="wrapper">
+        <hr>
+        <ul>
+            <li>
+                This registration form consists of three parts; 
+                Part 1 - Registration Form (Pages 1-2); 
+                Part 2 - Student Declaration; 
+                Part 3 - Programme Declaration
+            </li>
+            <li>
+                Students wishing to support their distance learning with sessions, 
+                must complete the Learning Pathway Registration Form
+            </li>
+        </ul>
+        <hr>
+        <div>
+            <h2>Part 1</h2>
+            <h5>
+                PLEASE READ THE FOLLOWING INSTRUCTIONS BEFORE COMPLETING THIS FORM 
+                (IN BLOCK LETTERS USING A BLACK PEN).
+            </h5>
+            <ol>
+                <li>Read the Yearbook as well as the Prospectus carefully before completing and submitting this Registration Form with all the relevant information</li>
+                <li>Read the Yearbook as well as the Prospectus carefully before completing and submitting this Registration Form with all the relevant information.
+                    The IMM Graduate School does not endorse third parties who offer tuition on IMM Graduate School programmes. Should an IMM Graduate School student enrol with any
+                    third party for tuition on IMM Graduate School programmes, the IMM Graduate School will be entitled to suspend the student’s registration with the IMM Graduate School</li>
+                <li>New students who meet the IMM Graduate School entry requirements, will only be registered once required payment as well as all required documents have been received</li>
+                <li>The IMM Graduate School cannot accept/process incomplete Registration Forms, even if required payment has been received. The onus is on the student to provide all 
+                    outstanding information/documentation in order for the IMM Graduate School to process the Registration Form</li>
+                <li>Late registration fees will apply when the Registration Form is received after the due date, even if the payment was received by the due date</li>
+                <li>Where reference is made to “Certified Copies”, photocopies of the documents must bear an original stamp and signature of a Commissioner of Oaths</li>
+            </ol>
+            <hr>
+            <h5>
+                THE FOLLOWING DOCUMENTS MUST BE UPLOADED TO THIS REGISTRATION FORM.
+            </h5>
+            <h5>All Students</h5>
+            <h6><i>*Renewal students need to only upload their proof of payment</i></h6>
+            <ul>
+                <li>
+                    <label for="pop">Proof of payment (as indicated in Section B: Payment Details)</label>
+                    <input type="file" name="pop" id="pop">
+                </li>
+                <li>
+                    <label for="id">Certified copy of ID Document</label>
+                    <input type="file" name="id" id="id">
+                </li>
+                <li>
+                    <label for="cert">Certified copy of highest schooling certificate (e.g. NSC), as well as any additional academic qualifications</label>
+                    <input type="file" name="cert" id="cert">
+                </li>
+            </ul>
+            <hr>
+            <h5>Foreign Students</h5>
+            <h6><i>*Renewal students need to only upload their relevant permit</i></h6>
+            <ul>
+                <li>
+                    <label for="gsce">GSCE / GCE other, namely</label>
+                    <input type="text" name="gce" id="gce">
+                    <input type="file" name="gsce" id="gsce">
+                </li>
+                <li>
+                    <label for="saqa">Certified copy of SAQA evaluation certificate (if writing examinations in South Africa)</label>
+                    <input type="file" name="saqa" id="saqa">
+                </li>
+                <li>
+                    <label for="permit">Relevant permit (if attending tutorials in South Africa)</label>
+                    <input type="file" name="permit" id="permit">
+                </li>
+            </ul>
+        </div>
+        <div>
+            <h3>Section A: Personal Details (All Students)</h3>
+            <form action="">
+                <div>
+                    <label for="title"></label>
+                    <select name="title" id="title">
+                        <option value="Prof"></option>
+                        <option value="Dr">Dr</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                        <option value="Miss">Miss</option>
+                    </select>
+                </div>
+                <div>
+                    <label for=""></label>
+                </div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+                <div><label for=""></label></div>
+            </form>
+        </div>
+    </div>
+        
+    
+</body>
+</html>
