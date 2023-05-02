@@ -108,12 +108,12 @@
             </ul>
         </div>
         <div>
-            <h3>Section A: Personal Details (All Students)</h3>
             <form action="">
+                <h3>Section A: Personal Details (All Students)</h3>
                 <div>
-                    <label for="title"></label>
+                    <label for="title">Title</label>
                     <select name="title" id="title">
-                        <option value="Prof"></option>
+                        <option value="Prof">Prof</option>
                         <option value="Dr">Dr</option>
                         <option value="Mr">Mr</option>
                         <option value="Mrs">Mrs</option>
@@ -122,20 +122,109 @@
                     </select>
                 </div>
                 <div>
-                    <label for=""></label>
+
+                    <label for="gender">Gender</label>
+                    <select name="gender" id="gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
                 </div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
-                <div><label for=""></label></div>
+                <div>
+                    <label for="surname">Surname (As per Identity Document)</label>
+                    <input type="text" name="surname" id="surname">
+                </div>
+                <div>
+                    <label for="pname">Preferred Name</label>
+                    <input type="text" name="pname" id="pname">
+                </div>
+                <div>
+                    <label for="fname">First Name(s) (As per Identity Document)</label>
+                    <input type="text" name="fname" id="fname">
+                </div>
+                <div>
+                    <label for="nationality">Nationality</label>
+                    <input type="text" name="nationality" id="nationality">
+                </div>
+                <div>
+                    <label for="country">Resident Country</label>
+                    <input type="text" name="country" id="country">
+                </div>
+                <div>
+                    <label for="idNo">Identity Document Number</label>
+                    <input type="number" name="idNo" id="idNo" maxlength="13">
+                </div>
+                <div>
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <div>
+                    <label for="cell">Cell Phone No.</label>
+                    <input type="number" name="cell" id="cell">
+                </div>
+                <div>
+                    <label for="tele">Telephone No. Work</label>
+                    <input type="number" name="tele" id="tele">
+                </div>
+                <div>
+                    <label for="kin">Next of Kin</label>
+                    <input type="number" name="kin" id="kin">
+                </div>
+                <div>
+                    <label for="email1">Email (1) (Complusory)</label>
+                    <input type="email" name="email1" id="email1">
+                </div>
+                <div>
+                    <label for="email2">Email (2)</label>
+                    <input type="email" name="email2" id="email2">
+                </div>
+
+                <hr>
+
+                <h3>Address Details (new students only, unless details changed)</h3>
+                <div>
+                    <label for="paddress">Postal Address</label>
+                    <textarea name="paddress" id="paddress" cols="27" rows="3"></textarea>
+                </div>
+                <div>
+                    <label for="code">Postal Code</label>
+                    <input type="number" name="code" id="code">
+                </div>
+
+                <h3>Work Details (new students only, unless details changed)</h3>
+                <div>
+                    <label for="occupation">Occupation</label>
+                    <input type="text" name="occupation" id="occupation">
+                </div>
+                <div>
+                    <label for="company">Company Name</label>
+                    <input type="text" name="company" id="company">
+                </div>
+                <div>
+                    <label for="compAddress">Company Address</label>
+                    <input type="text" name="compAddress" id="compAddress">
+                </div>
+                <div>
+                    <label for="compTel">Company Tel No.</label>
+                    <input type="number" name="compTel" id="compTel">
+                </div>
+
+                <h3>Legislation Requirements (new students only, unless details changed)</h3>
+                <div>
+                    <label for="ethnicity">*Ethnic Group</label>
+                    <select name="ethnicity" id="ethnicity">
+                        <option value="Black">Black</option>
+                        <option value="Coloured">Coloured</option>
+                        <option value="Indian">Indian</option>
+                        <option value="White">White</option>
+                    </select>
+                </div>
+                <p>*As required by the Department of Higher Education and Training to allow the IMM Graduate School
+                    and the government to track progress of the transformation of Further & Higher Education.</p>
+                <div>
+
+                </div>
+                <div></div>
+                <div></div>
             </form>
         </div>
     </div>
