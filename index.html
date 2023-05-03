@@ -218,17 +218,344 @@
                         <option value="White">White</option>
                     </select>
                 </div>
-                <p>*As required by the Department of Higher Education and Training to allow the IMM Graduate School
-                    and the government to track progress of the transformation of Further & Higher Education.</p>
+                <p>
+                    *As required by the Department of Higher Education and Training to allow the IMM Graduate School
+                    and the government to track progress of the transformation of Further & Higher Education.
+                </p>
                 <div>
-
+                    <label for="lang">Home Language</label>
+                    <input type="text" name="lang" id="lang">
                 </div>
-                <div></div>
-                <div></div>
+                <div>
+                    <label for="disa">Do you have a Disability?</label>
+                    <label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no">
+                </div>
+                <div>
+                    <label for="details">If yes, please provide details</label>
+                    <textarea name="details" id="details" cols="25" rows="3"></textarea>
+                </div>
+
+                <h3>Legislation Requirements (foreign students only)</h3>
+                <p>
+                    Work / Study permit/temporary resident permits and permanent resident permits are the only permits students can use to write examinations in South Africa. If you are not a South 
+                    African citizen and you are writing examinations in South Africa, please state the following:
+                </p>
+                <div>
+                    <label for="permitNo">Permit Number</label>
+                    <input type="number" name="permitNo" id="permitNo">
+                </div>
+                <div>
+                    <label for="type">Type of Permit</label>
+                    <input type="number" name="type" id="type">
+                </div>
+                <div>
+                    <label for="expDate">Permit Expiry Date</label>
+                    <input type="date" name="expDate" id="expDate">
+                </div>
+                <div>
+                    <label for="comms"><i>Choose the communication channel for receiving general notifications</i></label>
+                    <label for="sms">SMS</label>
+                    <input type="checkbox" name="comms" id="sms">
+                    <label for="email">Email</label>
+                    <input type="checkbox" name="comms" id="email">
+                    <label for="both">Both</label>
+                    <input type="checkbox" name="comms" id="both">
+                </div>
+                <div>
+                    <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only</i></label>
+                    <label for="ad">Advertisements</label>
+                    <input type="checkbox" name="hear" id="ad">
+                    <label for="word">Word of Mouth</label>
+                    <input type="checkbox" name="hear" id="word">
+                    <label for="web">Website</label>
+                    <input type="checkbox" name="hear" id="web">
+                    <label for="other">Other</label>
+                    <input type="text" name="hear" id="other">
+                </div>
+                <div>
+                    <p>Where did you attend school?</p>
+                    <div>
+                        <label for="sName">School Name</label>
+                        <input type="text" name="sName" id="sName">
+                    </div>
+                    <div>
+                        <label for="suburb">Suburb</label>
+                        <input type="text" name="suburb" id="suburb">
+                    </div>
+                    <div>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+                </div>
+
+                <h3>Section B: Payment Details</h3>
+                <h6>NOTE <br>NO CASH PAYMENTS ARE ACCEPTED AT ANY IMM Graduate School OFFICE</h6>
+                <div>
+                    <label for="proofpayment">The following proof of payment uploaded is:</label>
+                    <select name="proofpayment" id="proofpayment">
+                        <option value="Credit">Credit / Direct Deposity (at IMM GS Office)</option>
+                        <option value="Direct">Direct Deposit</option>
+                        <option value="EFT">EFT / e-payment</option>
+                        <option for="creds" value="CreditAccount">Credit on account : R</option>                                
+                    </select>
+                    <input type="number" name="creds" id="creds" placeholder="Specify Credit on Account Amount">       
+                </div>
+                <aside>
+                    <h5>Bank Details</h5>
+                    <ul>
+                        <li>Account Name:  IMM GSM (PTY) Ltd</li>
+                        <li>Bank: ABSA Commercial Banking</li>
+                        <li>Branch Code: 632 005</li>
+                        <li>EFT Code: 632 005</li>
+                        <li>Swift Code: ABSAJJZZ</li>
+                        <li>Account Number: 405 631 0798</li>
+                    </ul>
+                    <i>Indicate your full name and surname or your IMM Graduate School student number as reference</i>
+                </aside>
+
+                <h3>Section C: Academic Programme Details</h3>
+                <p>Please tick the programme for whcich you wish to register</p>
+                <div>
+                    <label for="uProgram">Undergraduate Programmes</label>
+                    <select name="uProgram" id="uProgram">
+                        <option value="marketingHC">Higher Certificate in Marketing</option>
+                        <option value="projectManagementHC">Higher Certificate in Project Management</option>
+                        <option value="supplychainManagementHC">Higher Certificate in Supply Chain Management</option>
+                        <option value="marketingManagementDiploma">Diploma in Marketing Management</option>
+                        <option value="supplychainManagementBCom">BCom in International Supply Chain Management</option>
+                        <option value="marketingManagementScience">Bachelor of Commerce in Marketing & Management Science</option>
+                        <option value="adminmarketingManagement">Bachelor of Business Administration on Marketing Management</option>
+                        <option value="singlemoduleEntry">Single Module Entry</option>
+                    </select>
+                    <label for="elec">Elective</label>
+                    <input type="text" name="elec" id="elec">
+                    <label for="otherprogram">Other</label>
+                    <input type="text" name="otherprogram" id="otherprogram">
+                </div>
+
+                <div>
+                    <label for="pProgram">Postgraduate Programmes (Only to be completed once a Postgraduate Application has been approved)</label>
+                    <select name="pProgram" id="pProgram">
+                        <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
+                        <option value="mPhilMarketing">MPhil in Marketing</option>
+                        <option value="singlemoduleEntryPost">Single Module Entry</option>
+                        <option value="bphilmarketingManagementHon">BPhil Honours in Marketing Management</option>
+                        <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>
+                    </select>
+                    <label for="otherpost">Other</label>
+                    <input type="text" name="otherpost" id="otherpost">
+                </div>
+
+                <h3>Section D: Examination Module Details</h3>
+                <i>A maximum of four modules may be examined in one examination session</i>
+                <br>
+                <div>
+                    <label for="sem1">Semester 1</label>
+                    <input type="text" name="sem1" id="one" placeholder="1">
+                    <input type="text" name="sem1" id="two" placeholder="2">
+                    <input type="text" name="sem1" id="three" placeholder="3">
+                    <input type="text" name="sem1" id="four" placeholder="4">
+                </div>
+                <br>
+                <div>
+                    <label for="sem2">Semester 2</label>                
+                    <input type="text" name="sem2" id="five" placeholder="5">
+                    <input type="text" name="sem2" id="six" placeholder="6">
+                    <input type="text" name="sem2" id="seven" placeholder="7">
+                    <input type="text" name="sem2" id="eight" placeholder="8">                    
+                </div>
+                <br><br>
+                <div>
+                    <label for="sem1L">Semester 1 (Lectures/Tutorials)</label>
+                    <p>SSC or Campus Name:</p>
+                    <input type="text" name="sem1L" id="one" placeholder="1">
+                    <input type="text" name="sem1L" id="two" placeholder="2">
+                    <input type="text" name="sem1L" id="three" placeholder="3">
+                    <input type="text" name="sem1L" id="four" placeholder="4">
+                </div>
+                <br>
+                <div>
+                    <label for="sem2L">Semester 2 (Lectures/Tutorials)</label>                
+                    <input type="text" name="sem2L" id="five" placeholder="5">
+                    <input type="text" name="sem2L" id="six" placeholder="6">
+                    <input type="text" name="sem2L" id="seven" placeholder="7">
+                    <input type="text" name="sem2L" id="eight" placeholder="8">                    
+                </div>
+
             </form>
+
+            <form action="">
+                <h2>Part 2: Student Declaration</h2>
+                <h5>Academic Integrity declaration by student</h5>
+                <p>
+                    I hereby acknowledge and agree to the Academic Integrity Statement as 
+                    set out below and I further acknowledge that this Academix Integrity 
+                    Statement applies for the duration of my studies at the IMM Graduate School
+                </p>
+                <ol>
+                    <li>I will not receive nor will I elicit any assistance from/to anothere student in the process of completion of any assessment.</li>
+                    <li>
+                        I understand that academic discussions with other students are encouraged, 
+                        but not to provide answers to assessment questions in the process of completion of an assessment. 
+                        Therefore my assessment answers will be entirely my own work and not the work of other students, 
+                        regardless of any academic discussions I was part of
+                    </li>
+                    <li>
+                        I will not plagiarise the work of others and submit it as my own, 
+                        nor will I self-plagiarise using excerpts from work I may have submitted previously 
+                        for assessment whether at the IMM Graduate School or any other insitution. 
+                        I revognise that I am responsible for understanding and applying the provisions of the 
+                        IMM Graduate School Policy on Plagiarism Prevention.
+                    </li>
+                    <li>I will not outsource any academic work to a third party by allowing someone else to contribute to or complete assessments on my behalf.</li>
+                    <li>
+                        I understand and acknowledge that any act of academic dishonesty may result 
+                        in academic miscoduct procedures being instituted against me to its full extent 
+                        as prescribed by IMM Graduate School policies. If found to have breached the 
+                        IMM Graduate School policies, I will submit to the academic inquiry process and 
+                        ackowledge that an outcome of this process may lead to me receiving zero percent 
+                        of an assessment, or even that I may be disenrolled
+                    </li>
+                </ol>
+
+                <p>I <span id="consentFname">first</span><span id="consentLname">second</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
+                <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
+                <input type="file" name="consent" id="consent">
+
+                <h5>General Declaration</h5>
+                <ul>
+                    <li>I have read the IMM Graduate School Prospectus and Yearbook.</li>
+                    <li>
+                        The IMM Graduate School does not endorsse third parties who offer the tuition on IMM Graduate School programmes. 
+                        Should an IMM Gradute School student enrol with any third party for tuition on IMM Graduate School programmes, 
+                        the IMM Graduate School will be entitled to suspend the student's registration with the IMM Graduate School
+                    </li>
+                    <li>
+                        I understand and accept that all policies and procedures pertaining to the IMM Graduate School, including the IMM Graduate School's examination policy, and agree to abide by the rules stated therein.
+                    </li>
+                    <li>
+                        I understannd and accept that upon my acceptance to the IMM Graduate School, 
+                        I immediately become liable to the IMM Graduate School for the full programme fees and 
+                        therefore undertake to pay the full programme fees on or before the due dates, when registering.
+                    </li>                    
+                    <li>
+                        I understand and accept that should I withdraw from the programme at any time, I wwill five written notice of my intention and immediately pay all monies due.
+                    </li>
+                    <li>I have read and accept the terms and conditions</li>
+                </ul>
+                <h5>IMPORTANT: I understand and accpet that for each semester a separate Registration Form must be completed.</h5>
+            </form>
+
+            <form action="">
+                <h2>Part 3: Student Declaration of Programme</h2>
+                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the:</p>
+                <label for="programmeChosen">Programme:</label>
+                <select name="programmeChosen" id="programmeChosen">
+                    <option value="SAQA ID: 118439">Higher Certificate in Marketing (SAQA ID: 118439)</option>
+                    <option value="SAQA ID: 118438">Higher Certificate in Project Management (SAQA ID: 118438)</option>
+                    <option value="SAQA ID: 117683">Higher Certificate in SUpply Chain Management (SAQA ID: 117683)</option>
+                    <option value="SAQA ID: 79546">Diploma in Marketing Management (SAQA ID: 79546)</option>
+                    <option value="SAQA ID: 118283">Bachelor of Business Administration (BBA) in Marketing Management (SAQA ID: 118283)</option>
+                    <option value="SAQA ID: 110628">Bachelor of Commerce in International Supply Chain Management (SAQA ID: 110628)</option>
+                    <option value="SAQA ID: 90737">Bachelor of Commerce (BCom) in Marketing and management Science (SAQA ID: 90737)</option>
+                    <option value="SAQA ID: 79846">Postgraduate Diploma in Marketing Management Science (SAQA ID: 79846)</option>
+                    <option value="SAQA ID: 79366">Bachelor of Philosophy (BPhil) Honours in Marketing Management (SAQA ID: 79366)</option>
+                    <option value="SAQA ID: 117085">Bachelor of Commerce (BCom) Honours in Supply Chain Management (SAQA ID: 117085)</option>
+                    <option value="SAQA ID: 86806">Masters of Philosophy (MPhil) in Marketing (SAQA ID: 86806)</option>                    
+                </select>
+                <p>and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated <input type="date" name="declarationDate" id="declarationDate"></p>
+                <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>                
+                             
+            </form>
+
+            <form action="">
+                <h4>OFFICE USE</h4>
+                <div>
+                    <label for="staffName">IMM GS staff member name and surname</label>
+                    <input type="text" name="staffName" id="staffName">
+                </div>
+                <div>
+                    <label for="officeDate">Date</label>
+                    <input type="date" name="officeDate" id="officeDate">
+                </div>
+                <div>
+                    <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
+                    <input type="file" name="consent" id="consent">   
+                </div>
+                
+                <br><br>
+
+                <h4>COMMENTS</h4>..
+                <textarea name="comments" id="comments" cols="100" rows="8"></textarea>
+            </form>            
         </div>
     </div>
         
+    <footer>
+        <div>
+            <h6>Cape Town</h6>
+            <ul>
+                <li>The Cruise Terminal,</li>
+                <li>Duncan Road,</li>
+                <li>Block B,</li>
+                <li>Floor 1,</li>
+                <li>Victoria & Alfred Waterfront,</li>
+                <li>Cape Town,</li>
+                <li><b>Tel </b>+27 (0)21 671 4426</li>
+            </ul>
+        </div>
+        <div>
+            <h6>Durban</h6>
+            <ul>
+                <li>Hollywoodbets Kings Park Stadium,</li>
+                <li>Suite 752, Ramp 4,</li>
+                <li>Jacko Jackson Drive,</li>
+                <li>Stamford Hill,</li>
+                <li>Durban,</li>
+                <li><b>Tel </b>+27 (0)31 312 2239</li>
+            </ul>
+        </div>
+        <div>
+            <h6>Parktown</h6>
+            <ul>
+                <li>No.2, 3rd Avenue,</li>
+                <li>Parktown,</li>
+                <li>Johannesburg,</li>
+                <li><b>Tel </b>+27 (0)628 2000</li>
+            </ul>
+        </div>
+        <div>
+            <h6>Pretoria</h6>
+            <ul>
+                <li>150 Anderson Street,</li>
+                <li>Coner Jan Shoba Street,</li>
+                <li>Brooklyn,</li>
+                <li>Pretoria,</li>
+                <li><b>Tel </b>+27 (0)87 898 8471</li>
+            </ul>
+        </div>
+        <div>
+            <h6>Stellenbosch</h6>
+            <ul>
+                <li>Bosmans Business Centre,</li>
+                <li>Floor 2,</li>
+                <li>Distillery Street,</li>
+                <li>Bosman's Crossing,</li>
+                <li>Stellenbosch</li>
+                <li><b>Tel </b>+27 (0)21 883 9102</li>
+            </ul>
+        </div>
+        <div>
+            <h6>Zimbabwe</h6>
+            <ul>
+                <li>21 Lezard Avenue</li>
+                <li>Milton Park,</li>
+                <li>Harare,</li>
+                <li>Zimababwe,</li>
+                <li><b>Tel </b>+263 86 770000 4806</li>
+            </ul>
+        </div>
+    </footer>
     
 </body>
 </html>
