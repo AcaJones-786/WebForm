@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
-        <img src="images/IMM.png" alt="">
-        <h1>Registration Form <span>{Year}</span></h1>
+        <section class="header">
+            <img src="images/IMM.png" alt="">
+            <h1>IMM Graduate School <span> <br> Registration Form <span>{Year}</span></span></h1>            
+        </section>
+
         <form action="">
             <p>Are you a new student?</p>
-            <ul>
+            <ul class="u-list">
                 <li>
                     <label for="newStudrad">New Student</label>
                     <input type="radio" name="student_type" id="newStudrad">
-                </li>
-                <li>
                     <label for="renewStudrad">Renewal Student</label>
                     <input type="radio" name="student_type" id="renewStudrad">
                 </li>
@@ -54,8 +56,7 @@
         <div>
             <h2>Part 1</h2>
             <h5>
-                PLEASE READ THE FOLLOWING INSTRUCTIONS BEFORE COMPLETING THIS FORM 
-                (IN BLOCK LETTERS USING A BLACK PEN).
+                PLEASE READ THE FOLLOWING INSTRUCTIONS BEFORE COMPLETING THIS FORM
             </h5>
             <ol>
                 <li>Read the Yearbook as well as the Prospectus carefully before completing and submitting this Registration Form with all the relevant information</li>
@@ -74,139 +75,148 @@
             </h5>
             <h5>All Students</h5>
             <h6><i>*Renewal students need to only upload their proof of payment</i></h6>
-            <ul>
+            <ul class="file-list">
                 <li>
                     <label for="pop">Proof of payment (as indicated in Section B: Payment Details)</label>
-                    <input type="file" name="pop" id="pop">
+                    <input type="file" name="pop" id="pop" class="input">
                 </li>
                 <li>
                     <label for="id">Certified copy of ID Document</label>
-                    <input type="file" name="id" id="id">
+                    <input type="file" name="id" id="iD" class="input">
                 </li>
                 <li>
                     <label for="cert">Certified copy of highest schooling certificate (e.g. NSC), as well as any additional academic qualifications</label>
-                    <input type="file" name="cert" id="cert">
+                    <input type="file" name="cert" id="cert" class="input">
                 </li>
             </ul>
             <hr>
             <h5>Foreign Students</h5>
             <h6><i>*Renewal students need to only upload their relevant permit</i></h6>
-            <ul>
+            <ul class="file-list">
                 <li>
                     <label for="gsce">GSCE / GCE other, namely</label>
                     <input type="text" name="gce" id="gce">
-                    <input type="file" name="gsce" id="gsce">
+                    <input type="file" name="gsce" id="gsce" class="input">
                 </li>
                 <li>
                     <label for="saqa">Certified copy of SAQA evaluation certificate (if writing examinations in South Africa)</label>
-                    <input type="file" name="saqa" id="saqa">
+                    <input type="file" name="saqa" id="saqa" class="input">
                 </li>
                 <li>
                     <label for="permit">Relevant permit (if attending tutorials in South Africa)</label>
-                    <input type="file" name="permit" id="permit">
+                    <input type="file" name="permit" id="permit" class="input">
                 </li>
             </ul>
+            <hr>
         </div>
         <div>
             <form action="">
                 <h3>Section A: Personal Details (All Students)</h3>
-                <div>
-                    <label for="title">Title</label>
-                    <select name="title" id="title">
-                        <option value="Prof">Prof</option>
-                        <option value="Dr">Dr</option>
-                        <option value="Mr">Mr</option>
-                        <option value="Mrs">Mrs</option>
-                        <option value="Ms">Ms</option>
-                        <option value="Miss">Miss</option>
-                    </select>
-                </div>
-                <div>
-
-                    <label for="gender">Gender</label>
-                    <select name="gender" id="gender">
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
-                </div>
-                <div>
-                    <label for="surname">Surname (As per Identity Document)</label>
-                    <input type="text" name="surname" id="surname">
-                </div>
-                <div>
-                    <label for="pname">Preferred Name</label>
-                    <input type="text" name="pname" id="pname">
-                </div>
-                <div>
-                    <label for="fname">First Name(s) (As per Identity Document)</label>
-                    <input type="text" name="fname" id="fname">
-                </div>
-                <div>
-                    <label for="nationality">Nationality</label>
-                    <input type="text" name="nationality" id="nationality">
-                </div>
-                <div>
-                    <label for="country">Resident Country</label>
-                    <input type="text" name="country" id="country">
-                </div>
-                <div>
-                    <label for="idNo">Identity Document Number</label>
-                    <input type="number" name="idNo" id="idNo" maxlength="13">
-                </div>
-                <div>
-                    <label for="dob">Date of Birth</label>
-                    <input type="date" name="dob" id="dob">
-                </div>
-                <div>
-                    <label for="cell">Cell Phone No.</label>
-                    <input type="number" name="cell" id="cell">
-                </div>
-                <div>
-                    <label for="tele">Telephone No. Work</label>
-                    <input type="number" name="tele" id="tele">
-                </div>
-                <div>
-                    <label for="kin">Next of Kin</label>
-                    <input type="number" name="kin" id="kin">
-                </div>
-                <div>
-                    <label for="email1">Email (1) (Complusory)</label>
-                    <input type="email" name="email1" id="email1">
-                </div>
-                <div>
-                    <label for="email2">Email (2)</label>
-                    <input type="email" name="email2" id="email2">
-                </div>
+                <section class="personal-details">
+                    <div>
+                        <label for="title">Title</label>
+                        <select name="title" id="title" class="input">
+                            <option value="Prof">Prof</option>
+                            <option value="Dr">Dr</option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Ms">Ms</option>
+                            <option value="Miss">Miss</option>
+                        </select>
+                    </div>
+                    <div>
+    
+                        <label for="gender">Gender</label>
+                        <select name="gender" id="gender" class="input">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="surname">Surname (As per Identity Document)</label>
+                        <input type="text" name="surname" id="surname" class="input">
+                    </div>
+                    <div>
+                        <label for="pname">Preferred Name</label>
+                        <input type="text" name="pname" id="pname" class="input">
+                    </div>
+                    <div>
+                        <label for="fname">First Name(s) (As per Identity Document)</label>
+                        <input type="text" name="fname" id="fname" class="input">
+                    </div>
+                    <div>
+                        <label for="nationality">Nationality</label>
+                        <input type="text" name="nationality" id="nationality" class="input">
+                    </div>
+                    <div>
+                        <label for="country">Resident Country</label>
+                        <input type="text" name="country" id="country" class="input">
+                    </div>
+                    <div>
+                        <label for="idNo">Identity Document Number</label>
+                        <input type="number" name="idNo" id="idNo" maxlength="13" class="input">
+                    </div>
+                    <div>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" class="input">
+                    </div>
+                    <div>
+                        <label for="cell">Cell Phone No.</label>
+                        <input type="number" name="cell" id="cell" class="input">
+                    </div>
+                    <div>
+                        <label for="tele">Telephone No. Work</label>
+                        <input type="number" name="tele" id="tele" class="input">
+                    </div>
+                    <div>
+                        <label for="kin">Next of Kin</label>
+                        <input type="number" name="kin" id="kin" class="input">
+                    </div>
+                    <div>
+                        <label for="email1">Email (1) (Complusory)</label>
+                        <input type="email" name="email1" id="email1" class="input">
+                    </div>
+                    <div>
+                        <label for="email2">Email (2)</label>
+                        <input type="email" name="email2" id="email2" class="input">
+                    </div>
+                </section>
+                
 
                 <hr>
 
                 <h3>Address Details (new students only, unless details changed)</h3>
-                <div>
-                    <label for="paddress">Postal Address</label>
-                    <textarea name="paddress" id="paddress" cols="27" rows="3"></textarea>
-                </div>
-                <div>
-                    <label for="code">Postal Code</label>
-                    <input type="number" name="code" id="code">
-                </div>
+                <section class="address-details">
+                    <div>
+                        <label for="paddress" class="raise-lbl">Postal Address</label>
+                        <textarea class="input" name="paddress" id="paddress" cols="50" rows="2"></textarea>
+                    </div>
+                    <div>
+                        <label for="code">Postal Code</label>
+                        <input type="number" name="code" id="code" class="input">
+                    </div>                    
+                </section>
+
 
                 <h3>Work Details (new students only, unless details changed)</h3>
-                <div>
-                    <label for="occupation">Occupation</label>
-                    <input type="text" name="occupation" id="occupation">
-                </div>
-                <div>
-                    <label for="company">Company Name</label>
-                    <input type="text" name="company" id="company">
-                </div>
-                <div>
-                    <label for="compAddress">Company Address</label>
-                    <input type="text" name="compAddress" id="compAddress">
-                </div>
-                <div>
-                    <label for="compTel">Company Tel No.</label>
-                    <input type="number" name="compTel" id="compTel">
-                </div>
+                <section class="work-details">
+                    <div>
+                        <label for="occupation">Occupation</label>
+                        <input type="text" name="occupation" id="occupation" class="input">
+                    </div>
+                    <div>
+                        <label for="company">Company Name</label>
+                        <input type="text" name="company" id="company" class="input">
+                    </div>
+                    <div>
+                        <label for="compAddress">Company Address</label>
+                        <input type="text" name="compAddress" id="compAddress" class="input">
+                    </div>
+                    <div>
+                        <label for="compTel">Company Tel No.</label>
+                        <input type="number" name="compTel" id="compTel" class="input">
+                    </div>
+                </section>
 
                 <h3>Legislation Requirements (new students only, unless details changed)</h3>
                 <div>
@@ -218,74 +228,85 @@
                         <option value="White">White</option>
                     </select>
                 </div>
-                <p>
+                <p style="margin-top: 0;">
                     *As required by the Department of Higher Education and Training to allow the IMM Graduate School
                     and the government to track progress of the transformation of Further & Higher Education.
                 </p>
-                <div>
-                    <label for="lang">Home Language</label>
-                    <input type="text" name="lang" id="lang">
-                </div>
-                <div>
-                    <label for="disa">Do you have a Disability?</label>
-                    <label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no">
-                </div>
-                <div>
-                    <label for="details">If yes, please provide details</label>
-                    <textarea name="details" id="details" cols="25" rows="3"></textarea>
-                </div>
+                <section class="legislation-req">
+                    <div>
+                        <label for="lang">Home Language</label>
+                        <input type="text" name="lang" id="lang">
+                    </div>
+                    <div>
+                        <label for="disa">Do you have a Disability?</label>
+                        <label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no">
+                    </div>
+                    <div>
+                        <label class="raise-lbl" for="details">If yes, please provide details</label>
+                        <textarea name="details" id="details" cols="35" rows="2"></textarea>
+                    </div>    
+                </section>
+                
 
                 <h3>Legislation Requirements (foreign students only)</h3>
                 <p>
                     Work / Study permit/temporary resident permits and permanent resident permits are the only permits students can use to write examinations in South Africa. If you are not a South 
                     African citizen and you are writing examinations in South Africa, please state the following:
                 </p>
-                <div>
-                    <label for="permitNo">Permit Number</label>
-                    <input type="number" name="permitNo" id="permitNo">
-                </div>
-                <div>
-                    <label for="type">Type of Permit</label>
-                    <input type="number" name="type" id="type">
-                </div>
-                <div>
-                    <label for="expDate">Permit Expiry Date</label>
-                    <input type="date" name="expDate" id="expDate">
-                </div>
-                <div>
-                    <label for="comms"><i>Choose the communication channel for receiving general notifications</i></label>
-                    <label for="sms">SMS</label>
-                    <input type="checkbox" name="comms" id="sms">
-                    <label for="email">Email</label>
-                    <input type="checkbox" name="comms" id="email">
-                    <label for="both">Both</label>
-                    <input type="checkbox" name="comms" id="both">
-                </div>
-                <div>
-                    <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only</i></label>
-                    <label for="ad">Advertisements</label>
-                    <input type="checkbox" name="hear" id="ad">
-                    <label for="word">Word of Mouth</label>
-                    <input type="checkbox" name="hear" id="word">
-                    <label for="web">Website</label>
-                    <input type="checkbox" name="hear" id="web">
-                    <label for="other">Other</label>
-                    <input type="text" name="hear" id="other">
-                </div>
+                <section class="legislation-req">
+                    <div>
+                        <label for="permitNo">Permit Number</label>
+                        <input type="number" name="permitNo" id="permitNo">
+                    </div>
+                    <div>
+                        <label for="type">Type of Permit</label>
+                        <input type="number" name="type" id="type">
+                    </div>
+                    <div>
+                        <label for="expDate">Permit Expiry Date</label>
+                        <input type="date" name="expDate" id="expDate">
+                    </div>
+                </section>
+                
+                <section>
+                    <div style="margin-top: 20px;">
+                        <label style="margin-right: 34.6%;" for="comms"><i>Choose the communication channel for receiving general notifications</i></label>
+                        <label for="sms">SMS</label>
+                        <input type="checkbox" name="comms" id="sms">
+                        <label for="email">Email</label>
+                        <input type="checkbox" name="comms" id="email">
+                        <label for="both">Both</label>
+                        <input type="checkbox" name="comms" id="both">
+                    </div>
+                    <div>
+                        <label style="margin-right: 28%;" for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only</i></label>
+                        <label for="ad">Advertisements</label>
+                        <input type="checkbox" name="hear" id="ad">
+                        <label for="word">Word of Mouth</label>
+                        <input type="checkbox" name="hear" id="word">
+                        <label for="web">Website</label>
+                        <input type="checkbox" name="hear" id="web">
+                        <label for="other">Other</label>
+                        <input type="text" name="hear" id="other">
+                    </div>                    
+                </section>
+
                 <div>
                     <p>Where did you attend school?</p>
-                    <div>
-                        <label for="sName">School Name</label>
-                        <input type="text" name="sName" id="sName">
-                    </div>
-                    <div>
-                        <label for="suburb">Suburb</label>
-                        <input type="text" name="suburb" id="suburb">
-                    </div>
-                    <div>
-                        <label for="city">City</label>
-                        <input type="text" name="city" id="city">
-                    </div>
+                    <section class="legislation-req">
+                        <div>
+                            <label for="sName">School Name</label>
+                            <input type="text" name="sName" id="sName">
+                        </div>
+                        <div>
+                            <label for="suburb">Suburb</label>
+                            <input type="text" name="suburb" id="suburb">
+                        </div>
+                        <div>
+                            <label for="city">City</label>
+                            <input type="text" name="city" id="city">
+                        </div>                   
+                    </section>
                 </div>
 
                 <h3>Section B: Payment Details</h3>
