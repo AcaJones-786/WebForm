@@ -235,14 +235,17 @@
                 <section class="legislation-req">
                     <div>
                         <label for="lang">Home Language</label>
+                        <br>
                         <input type="text" name="lang" id="lang">
                     </div>
                     <div>
                         <label for="disa">Do you have a Disability?</label>
+                        <br>
                         <label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no">
                     </div>
                     <div>
                         <label class="raise-lbl" for="details">If yes, please provide details</label>
+                        <br>
                         <textarea name="details" id="details" cols="35" rows="2"></textarea>
                     </div>    
                 </section>
@@ -270,25 +273,32 @@
                 
                 <section>
                     <div style="margin-top: 20px;">
-                        <label style="margin-right: 34.6%;" for="comms"><i>Choose the communication channel for receiving general notifications</i></label>
-                        <label for="sms">SMS</label>
-                        <input type="checkbox" name="comms" id="sms">
-                        <label for="email">Email</label>
-                        <input type="checkbox" name="comms" id="email">
-                        <label for="both">Both</label>
-                        <input type="checkbox" name="comms" id="both">
+                        <label for="comms"><i>Choose the communication channel for receiving general notifications: &nbsp&nbsp&nbsp </i></label>
+                        <div class="disp-inline">                            
+                            <label for="sms">SMS</label>
+                            <input type="checkbox" name="comms" id="sms">
+                        </div>
+                        <div class="disp-inline">                             
+                            <label for="email">Email</label>
+                            <input type="checkbox" name="comms" id="email">
+                        </div>
+                        <div class="disp-inline">
+                            <label for="both">Both</label>
+                            <input type="checkbox" name="comms" id="both">
+                        </div>                  
                     </div>
                     <div>
-                        <label style="margin-right: 28%;" for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only</i></label>
+                        <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only: &nbsp&nbsp&nbsp</i></label>
                         <label for="ad">Advertisements</label>
                         <input type="checkbox" name="hear" id="ad">
                         <label for="word">Word of Mouth</label>
                         <input type="checkbox" name="hear" id="word">
                         <label for="web">Website</label>
-                        <input type="checkbox" name="hear" id="web">
+                        <input type="checkbox" name="hear" id="web">                    
                         <label for="other">Other</label>
                         <input type="text" name="hear" id="other">
-                    </div>                    
+                    </div>
+
                 </section>
 
                 <div>
@@ -322,55 +332,75 @@
                     <input type="number" name="creds" id="creds" placeholder="Specify Credit on Account Amount">       
                 </div>
                 <aside>
-                    <h5>Bank Details</h5>
-                    <ul>
+                    <h5 style="font-size: larger; margin-top: 1em;">Bank Details</h5>
+                    <div class="banking-details">
+                        <ul>
                         <li>Account Name:  IMM GSM (PTY) Ltd</li>
                         <li>Bank: ABSA Commercial Banking</li>
                         <li>Branch Code: 632 005</li>
                         <li>EFT Code: 632 005</li>
                         <li>Swift Code: ABSAJJZZ</li>
                         <li>Account Number: 405 631 0798</li>
-                    </ul>
-                    <i>Indicate your full name and surname or your IMM Graduate School student number as reference</i>
+                        </ul>
+                    </div>                    
+                    <div>
+                        <i>Indicate your full name and surname or your IMM Graduate School student number as reference</i>
+                    </div>
                 </aside>
 
                 <h3>Section C: Academic Programme Details</h3>
-                <p>Please tick the programme for whcich you wish to register</p>
-                <div>
-                    <label for="uProgram">Undergraduate Programmes</label>
-                    <select name="uProgram" id="uProgram">
-                        <option value="marketingHC">Higher Certificate in Marketing</option>
-                        <option value="projectManagementHC">Higher Certificate in Project Management</option>
-                        <option value="supplychainManagementHC">Higher Certificate in Supply Chain Management</option>
-                        <option value="marketingManagementDiploma">Diploma in Marketing Management</option>
-                        <option value="supplychainManagementBCom">BCom in International Supply Chain Management</option>
-                        <option value="marketingManagementScience">Bachelor of Commerce in Marketing & Management Science</option>
-                        <option value="adminmarketingManagement">Bachelor of Business Administration on Marketing Management</option>
-                        <option value="singlemoduleEntry">Single Module Entry</option>
-                    </select>
-                    <label for="elec">Elective</label>
-                    <input type="text" name="elec" id="elec">
-                    <label for="otherprogram">Other</label>
-                    <input type="text" name="otherprogram" id="otherprogram">
-                </div>
+                <p>Please tick the programme for which you wish to register</p>
+                <label for="uProgram"><b>Undergraduate Programmes</b></label>
+                <br>
+                <div class="legislation-req">                    
+                    <div style="margin-bottom: 2em;">
+                        <select name="uProgram" id="uProgram">
+                            <option hidden selected>---Choose a programme---</option>
+                            <option value="marketingHC">Higher Certificate in Marketing</option>
+                            <option value="projectManagementHC">Higher Certificate in Project Management</option>
+                            <option value="supplychainManagementHC">Higher Certificate in Supply Chain Management</option>
+                            <option value="marketingManagementDiploma">Diploma in Marketing Management</option>
+                            <option value="supplychainManagementBCom">BCom in International Supply Chain Management</option>
+                            <option value="marketingManagementScience">Bachelor of Commerce in Marketing & Management Science</option>
+                            <option value="adminmarketingManagement">Bachelor of Business Administration on Marketing Management</option>
+                            <option value="singlemoduleEntry">Single Module Entry</option>
+                            <option value="">None</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="elec">Elective</label>
+                        <input type="text" name="elec" id="elec">
+                    </div>
+                    <div>
 
-                <div>
-                    <label for="pProgram">Postgraduate Programmes (Only to be completed once a Postgraduate Application has been approved)</label>
+                        <label for="otherprogram">Other</label>
+                        <input type="text" name="otherprogram" id="otherprogram">
+                    </div>
+                </div>
+                <label for="pProgram"><b>Postgraduate Programmes (Only to be completed once a Postgraduate Application has been approved)</b></label>
+                <br>
+                <div class="legislation-req">
+                    
                     <select name="pProgram" id="pProgram">
+                        <option hidden selected>---Choose a programme---</option>
                         <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
                         <option value="mPhilMarketing">MPhil in Marketing</option>
                         <option value="singlemoduleEntryPost">Single Module Entry</option>
                         <option value="bphilmarketingManagementHon">BPhil Honours in Marketing Management</option>
-                        <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>
-                    </select>
-                    <label for="otherpost">Other</label>
-                    <input type="text" name="otherpost" id="otherpost">
-                </div>
+                        <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>                        
+                        <option value="">None</option>
+                    </select>                    
+                    <div></div>
+                    <div>
+                        <label for="otherpost">Other</label>
+                        <input type="text" name="otherpost" id="otherpost">
+                    </div>                    
+                </div>                  
 
                 <h3>Section D: Examination Module Details</h3>
                 <i>A maximum of four modules may be examined in one examination session</i>
                 <br>
-                <div>
+                <!-- <div>
                     <label for="sem1">Semester 1</label>
                     <input type="text" name="sem1" id="one" placeholder="1">
                     <input type="text" name="sem1" id="two" placeholder="2">
@@ -401,7 +431,69 @@
                     <input type="text" name="sem2L" id="six" placeholder="6">
                     <input type="text" name="sem2L" id="seven" placeholder="7">
                     <input type="text" name="sem2L" id="eight" placeholder="8">                    
-                </div>
+                </div> -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Semester 1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem1" id="one" placeholder="1">
+                                <input type="text" name="sem1" id="two" placeholder="2">
+                                <input type="text" name="sem1" id="three" placeholder="3">
+                                <input type="text" name="sem1" id="four" placeholder="4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Semester 2</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem2" id="five" placeholder="5">
+                                <input type="text" name="sem2" id="six" placeholder="6">
+                                <input type="text" name="sem2" id="seven" placeholder="7">
+                                <input type="text" name="sem2" id="eight" placeholder="8"> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br><br>
+                <i>A maximum of four modules may be examined in one examination session</i>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Semester 1 (lectures/Tutorial)</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">SSC or Campus Name:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem1" id="one" placeholder="1">
+                                <input type="text" name="sem1" id="two" placeholder="2">
+                                <input type="text" name="sem1" id="three" placeholder="3">
+                                <input type="text" name="sem1" id="four" placeholder="4">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Semester 2 (lectures/Tutorial)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem2" id="five" placeholder="5">
+                                <input type="text" name="sem2" id="six" placeholder="6">
+                                <input type="text" name="sem2" id="seven" placeholder="7">
+                                <input type="text" name="sem2" id="eight" placeholder="8"> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
 
             </form>
 
@@ -440,8 +532,12 @@
                 </ol>
 
                 <p>I <span id="consentFname">first</span><span id="consentLname">second</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
-                <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                <input type="file" name="consent" id="consent">
+                <div class="signature">
+                    <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
+                    <input type="file" name="consent" id="consent">   
+                </div>                
+
+                <hr>
 
                 <h5>General Declaration</h5>
                 <ul>
@@ -469,9 +565,9 @@
 
             <form action="">
                 <h2>Part 3: Student Declaration of Programme</h2>
-                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the:</p>
-                <label for="programmeChosen">Programme:</label>
-                <select name="programmeChosen" id="programmeChosen">
+                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp<input type="text" name="set-programme" id="set-programme">&nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <input type="date" name="declarationDate" id="declarationDate"></p>
+                <!-- <label for="programmeChosen">Programme:</label> -->
+                <!-- <select name="programmeChosen" id="programmeChosen">
                     <option value="SAQA ID: 118439">Higher Certificate in Marketing (SAQA ID: 118439)</option>
                     <option value="SAQA ID: 118438">Higher Certificate in Project Management (SAQA ID: 118438)</option>
                     <option value="SAQA ID: 117683">Higher Certificate in SUpply Chain Management (SAQA ID: 117683)</option>
@@ -483,100 +579,115 @@
                     <option value="SAQA ID: 79366">Bachelor of Philosophy (BPhil) Honours in Marketing Management (SAQA ID: 79366)</option>
                     <option value="SAQA ID: 117085">Bachelor of Commerce (BCom) Honours in Supply Chain Management (SAQA ID: 117085)</option>
                     <option value="SAQA ID: 86806">Masters of Philosophy (MPhil) in Marketing (SAQA ID: 86806)</option>                    
-                </select>
-                <p>and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated <input type="date" name="declarationDate" id="declarationDate"></p>
-                <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>                
+                </select> -->
+                <p>
+                    <ul>
+                        <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>
+                    </ul>
+                </p>                
                              
             </form>
 
             <form action="">
                 <h4>OFFICE USE</h4>
                 <div>
-                    <label for="staffName">IMM GS staff member name and surname</label>
-                    <input type="text" name="staffName" id="staffName">
+                    <ul class="office-list">
+                        <li>
+                            <label for="staffName">IMM GS staff member name and surname:</label>
+                        </li>
+                        <li>
+                            <input type="text" name="staffName" id="staffName">
+                        </li>
+                        <li>
+                            <label for="officeDate">Date</label>                            
+                        </li>
+                        <li>
+                            <input type="date" name="officeDate" id="officeDate">
+                        </li>
+                        <li>
+                            <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>                           
+                        </li>
+                        <li>
+                            <input type="file" name="consent" id="consent"> 
+                        </li>
+                    </ul>
                 </div>
-                <div>
-                    <label for="officeDate">Date</label>
-                    <input type="date" name="officeDate" id="officeDate">
-                </div>
-                <div>
-                    <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                    <input type="file" name="consent" id="consent">   
-                </div>
-                
+
                 <br><br>
 
-                <h4>COMMENTS</h4>..
+                <h4>COMMENTS</h4>
                 <textarea name="comments" id="comments" cols="100" rows="8"></textarea>
             </form>            
         </div>
     </div>
         
     <footer>
-        <div>
-            <h6>Cape Town</h6>
-            <ul>
-                <li>The Cruise Terminal,</li>
-                <li>Duncan Road,</li>
-                <li>Block B,</li>
-                <li>Floor 1,</li>
-                <li>Victoria & Alfred Waterfront,</li>
-                <li>Cape Town,</li>
-                <li><b>Tel </b>+27 (0)21 671 4426</li>
-            </ul>
-        </div>
-        <div>
-            <h6>Durban</h6>
-            <ul>
-                <li>Hollywoodbets Kings Park Stadium,</li>
-                <li>Suite 752, Ramp 4,</li>
-                <li>Jacko Jackson Drive,</li>
-                <li>Stamford Hill,</li>
-                <li>Durban,</li>
-                <li><b>Tel </b>+27 (0)31 312 2239</li>
-            </ul>
-        </div>
-        <div>
-            <h6>Parktown</h6>
-            <ul>
-                <li>No.2, 3rd Avenue,</li>
-                <li>Parktown,</li>
-                <li>Johannesburg,</li>
-                <li><b>Tel </b>+27 (0)628 2000</li>
-            </ul>
-        </div>
-        <div>
-            <h6>Pretoria</h6>
-            <ul>
-                <li>150 Anderson Street,</li>
-                <li>Coner Jan Shoba Street,</li>
-                <li>Brooklyn,</li>
-                <li>Pretoria,</li>
-                <li><b>Tel </b>+27 (0)87 898 8471</li>
-            </ul>
-        </div>
-        <div>
-            <h6>Stellenbosch</h6>
-            <ul>
-                <li>Bosmans Business Centre,</li>
-                <li>Floor 2,</li>
-                <li>Distillery Street,</li>
-                <li>Bosman's Crossing,</li>
-                <li>Stellenbosch</li>
-                <li><b>Tel </b>+27 (0)21 883 9102</li>
-            </ul>
-        </div>
-        <div>
-            <h6>Zimbabwe</h6>
-            <ul>
-                <li>21 Lezard Avenue</li>
-                <li>Milton Park,</li>
-                <li>Harare,</li>
-                <li>Zimababwe,</li>
-                <li><b>Tel </b>+263 86 770000 4806</li>
-            </ul>
-        </div>
-    </footer>
-    
+        <h4>Student Support Centres and Regional Offices</h4>
+        <section class="support-centres">
+            <div>
+                <h5>Cape Town</h5>
+                <ul>
+                    <li>The Cruise Terminal,</li>
+                    <li>Duncan Road,</li>
+                    <li>Block B,</li>
+                    <li>Floor 1,</li>
+                    <li>Victoria & Alfred Waterfront,</li>
+                    <li>Cape Town,</li>
+                    <li><b>Tel </b>+27 (0)21 671 4426</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Durban</h5>
+                <ul>
+                    <li>Hollywoodbets Kings Park Stadium,</li>
+                    <li>Suite 752, Ramp 4,</li>
+                    <li>Jacko Jackson Drive,</li>
+                    <li>Stamford Hill,</li>
+                    <li>Durban,</li>
+                    <li><b>Tel </b>+27 (0)31 312 2239</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Parktown</h5>
+                <ul>
+                    <li>No.2, 3rd Avenue,</li>
+                    <li>Parktown,</li>
+                    <li>Johannesburg,</li>
+                    <li><b>Tel </b>+27 (0)628 2000</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Pretoria</h5>
+                <ul>
+                    <li>150 Anderson Street,</li>
+                    <li>Coner Jan Shoba Street,</li>
+                    <li>Brooklyn,</li>
+                    <li>Pretoria,</li>
+                    <li><b>Tel </b>+27 (0)87 898 8471</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Stellenbosch</h5>
+                <ul>
+                    <li>Bosmans Business Centre,</li>
+                    <li>Floor 2,</li>
+                    <li>Distillery Street,</li>
+                    <li>Bosman's Crossing,</li>
+                    <li>Stellenbosch</li>
+                    <li><b>Tel </b>+27 (0)21 883 9102</li>
+                </ul>
+            </div>
+            <div>
+                <h5>Zimbabwe</h5>
+                <ul>
+                    <li>21 Lezard Avenue</li>
+                    <li>Milton Park,</li>
+                    <li>Harare,</li>
+                    <li>Zimababwe,</li>
+                    <li><b>Tel </b>+263 86 770000 4806</li>
+                </ul>
+            </div>
+        </section>
+    </footer>    
 </body>
 </html>

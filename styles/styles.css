@@ -1,7 +1,9 @@
 body{
     padding: 1em;
 }
-
+.wrapper{
+    border: solid 3px;
+}
 @media screen and (min-width: 720px) {
     .header{
         display: grid;
@@ -41,6 +43,42 @@ body{
     .raise-lbl{
         vertical-align: top;
     }
+    .disp-inline{
+        display: inline;
+    }
+    .banking-details{
+        border: solid 3px;
+        display: inline-block;
+        padding: 7px;
+        list-style: circle;
+    }
+    .banking-details> ul{
+        margin: 0;
+        padding: 15px;
+    }
+    .signature{
+        border: solid  1px;
+        border-radius: 10px;
+        padding: 5px;
+        display: inline;
+    }
+    .office-list{
+        list-style: none;
+        padding: 0;
+    }
+    .office-list>li>input{
+        margin-bottom: 1em;
+    }
+    footer{
+        padding: 5px;
+    }
+    #comments{
+        width: 99%;
+    }
+    .support-centres{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+    }
 
 }
 .wrapper{
@@ -52,10 +90,29 @@ h2, h3{
     text-align: center;
     background-color: #0C4B88;
     color: whitesmoke;
+    border-radius: 7px;
 }
 h5, h6{
     margin: 0;
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #c4d8ff;
+}
+td > input{
+    width: 24%;
+    height: 1cm;
+    font-size: x-large;
+}
+
 
 
 
