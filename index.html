@@ -8,38 +8,29 @@
     <link rel="stylesheet" href="styles/styles.css">
     <script src="script/scipt.js"></script>
 </head>
-<body>
+<body onload="addYearToSpan()">
     <header>
         <section class="header">
             <img src="images/IMM.png" alt="">
-            <h1>IMM Graduate School <span> <br> Registration Form <span>{Year}</span></span></h1>            
+            <h1>IMM Graduate School <span> <br> Registration Form <span id="year"></span></span></h1>            
         </section>
 
 
-
-
-
-
-
-
-
-
-
-        <form action="">
+        <form action="" onsubmit="return false;">
             <p>Are you a new student?</p>
             <ul class="u-list">
                 <li>
                     <label for="newStudrad">New Student</label>
-                    <input type="radio" name="student_type" id="newStudrad">
+                    <input type="radio" name="student_type" value="newST" id="newStudrad">
                     <label for="renewStudrad">Renewal Student</label>
-                    <input type="radio" name="student_type" id="renewStudrad">
-                    <button onclick="myfunc()">here</button>
+                    <input type="radio" name="student_type" value="oldST" id="renewStudrad">
+                    <button id="confirm_btn" onclick="getValue()">Confirm</button>
                 </li>
-                <li>
+                <li class="hide">
                     <label for="studNo">Enter student number:</label>
                     <input type="number" name="studNo" id="studNoIpt" maxlength="6">
                 </li>
-                <li>
+                <li class="hide">
                     <label for="sem">Which semester are you registering for?</label>
                     <select name="sem" id="sem">
                         <option value="1">1</option>
@@ -122,12 +113,12 @@
             <hr>
         </div>
         <div>
-            <form action="">
+            <form action="" onsubmit="return false;">
                 <h3>Section A: Personal Details (All Students)</h3>
                 <section class="personal-details">
                     <div>
                         <label for="title">Title</label>
-                        <select name="title" id="title" class="input">
+                        <select name="title" id="title" class="input secA">
                             <option value="Prof">Prof</option>
                             <option value="Dr">Dr</option>
                             <option value="Mr">Mr</option>
@@ -139,58 +130,58 @@
                     <div>
     
                         <label for="gender">Gender</label>
-                        <select name="gender" id="gender" class="input">
+                        <select name="gender" id="gender" class="input secA">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                     </div>
                     <div>
                         <label for="surname">Surname (As per Identity Document)</label>
-                        <input type="text" name="surname" id="surname" class="input">
+                        <input type="text" name="surname" id="surname" class="input secA">
                     </div>
                     <div>
                         <label for="pname">Preferred Name</label>
-                        <input type="text" name="pname" id="pname" class="input">
+                        <input type="text" name="pname" id="pname" class="input secA">
                     </div>
                     <div>
                         <label for="fname">First Name(s) (As per Identity Document)</label>
-                        <input type="text" name="fname" id="fname" class="input">
+                        <input type="text" name="fname" id="fname" class="input secA">
                     </div>
                     <div>
                         <label for="nationality">Nationality</label>
-                        <input type="text" name="nationality" id="nationality" class="input">
+                        <input type="text" name="nationality" id="nationality" class="input secA">
                     </div>
                     <div>
                         <label for="country">Resident Country</label>
-                        <input type="text" name="country" id="country" class="input">
+                        <input type="text" name="country" id="country" class="input secA">
                     </div>
                     <div>
                         <label for="idNo">Identity Document Number</label>
-                        <input type="number" name="idNo" id="idNo" maxlength="13" class="input">
+                        <input type="number" name="idNo" id="idNo" maxlength="13" class="input secA">
                     </div>
                     <div>
                         <label for="dob">Date of Birth</label>
-                        <input type="date" name="dob" id="dob" class="input">
+                        <input type="date" name="dob" id="dob" class="input secA">
                     </div>
                     <div>
                         <label for="cell">Cell Phone No.</label>
-                        <input type="number" name="cell" id="cell" class="input">
+                        <input type="number" name="cell" id="cell" class="input secA">
                     </div>
                     <div>
                         <label for="tele">Telephone No. Work</label>
-                        <input type="number" name="tele" id="tele" class="input">
+                        <input type="number" name="tele" id="tele" class="input secA">
                     </div>
                     <div>
                         <label for="kin">Next of Kin</label>
-                        <input type="number" name="kin" id="kin" class="input">
+                        <input type="number" name="kin" id="kin" class="input secA">
                     </div>
                     <div>
                         <label for="email1">Email (1) (Complusory)</label>
-                        <input type="email" name="email1" id="email1" class="input">
+                        <input type="email" name="email1" id="email1" class="input secA">
                     </div>
                     <div>
                         <label for="email2">Email (2)</label>
-                        <input type="email" name="email2" id="email2" class="input">
+                        <input type="email" name="email2" id="email2" class="input secA">
                     </div>
                 </section>
                 
@@ -366,16 +357,16 @@
                 <br>
                 <div class="legislation-req">                    
                     <div style="margin-bottom: 2em;">
-                        <button id="btntest" onclick="myFunction()">test</button>
+                        <button id="btntest" onclick="setProgramme()">test</button>
                         <select name="uProgram" id="uProgram">
                             <option hidden selected>---Choose a programme---</option>
-                            <option value="marketingHC">Higher Certificate in Marketing</option>
-                            <option value="projectManagementHC">Higher Certificate in Project Management</option>
-                            <option value="supplychainManagementHC">Higher Certificate in Supply Chain Management</option>
-                            <option value="marketingManagementDiploma">Diploma in Marketing Management</option>
-                            <option value="supplychainManagementBCom">BCom in International Supply Chain Management</option>
-                            <option value="marketingManagementScience">Bachelor of Commerce in Marketing & Management Science</option>
-                            <option value="adminmarketingManagement">Bachelor of Business Administration on Marketing Management</option>
+                            <option value="HCMarketing">Higher Certificate in Marketing</option>
+                            <option value="HCProjectManagement">Higher Certificate in Project Management</option>
+                            <option value="HCSupplyChainManagement">Higher Certificate in Supply Chain Management</option>
+                            <option value="DipMarketingManagement">Diploma in Marketing Management</option>
+                            <option value="BComInterSupplyChainManagement">BCom in International Supply Chain Management</option>
+                            <option value="BacMarketingManagementScience">Bachelor of Commerce in Marketing & Management Science</option>
+                            <option value="BacAdminMarketingManagement">Bachelor of Business Administration on Marketing Management</option>
                             <option value="singlemoduleEntry">Single Module Entry</option>
                             <option value="">None</option>
                         </select>

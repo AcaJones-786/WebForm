@@ -79,6 +79,16 @@ body{
         display: grid;
         grid-template-columns: repeat(6, 1fr);
     }
+    .secA{
+        border: none;
+        border-radius: 7px;
+        border-bottom: solid 2px;
+        opacity: 0.7;
+        width: 15em;
+    }
+    .secA:focus{
+        opacity: 1;
+    }
 
 }
 .wrapper{
@@ -110,7 +120,10 @@ th {
 td > input{
     width: 24%;
     height: 1cm;
-    font-size: x-large;
+    font-size: small;
+}
+.hide{
+    display: none;
 }
 
 
