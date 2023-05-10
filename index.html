@@ -98,7 +98,7 @@
             <ul class="file-list">
                 <li>
                     <label for="gsce">GSCE / GCE other, namely</label>
-                    <input type="text" name="gce" id="gce">
+                    <input type="text" name="gce" id="gce" class="secA">
                     <input type="file" name="gsce" id="gsce" class="input">
                 </li>
                 <li>
@@ -192,11 +192,11 @@
                 <section class="address-details">
                     <div>
                         <label for="paddress" class="raise-lbl">Postal Address</label>
-                        <textarea class="input" name="paddress" id="paddress" cols="50" rows="2"></textarea>
+                        <textarea class="input txtarea" name="paddress" id="paddress" cols="50" rows="2"></textarea>
                     </div>
                     <div>
                         <label for="code">Postal Code</label>
-                        <input type="number" name="code" id="code" class="input">
+                        <input type="number" name="code" id="code" class="input secA">
                     </div>                    
                 </section>
 
@@ -205,26 +205,26 @@
                 <section class="work-details">
                     <div>
                         <label for="occupation">Occupation</label>
-                        <input type="text" name="occupation" id="occupation" class="input">
+                        <input type="text" name="occupation" id="occupation" class="input secA">
                     </div>
                     <div>
                         <label for="company">Company Name</label>
-                        <input type="text" name="company" id="company" class="input">
+                        <input type="text" name="company" id="company" class="input secA">
                     </div>
                     <div>
                         <label for="compAddress">Company Address</label>
-                        <input type="text" name="compAddress" id="compAddress" class="input">
+                        <input type="text" name="compAddress" id="compAddress" class="input secA">
                     </div>
                     <div>
                         <label for="compTel">Company Tel No.</label>
-                        <input type="number" name="compTel" id="compTel" class="input">
+                        <input type="number" name="compTel" id="compTel" class="input secA">
                     </div>
                 </section>
 
                 <h3>Legislation Requirements (new students only, unless details changed)</h3>
                 <div>
                     <label for="ethnicity">*Ethnic Group</label>
-                    <select name="ethnicity" id="ethnicity">
+                    <select name="ethnicity" id="ethnicity" class="secA">
                         <option value="Black">Black</option>
                         <option value="Coloured">Coloured</option>
                         <option value="Indian">Indian</option>
@@ -239,7 +239,7 @@
                     <div>
                         <label for="lang">Home Language</label>
                         <br>
-                        <input type="text" name="lang" id="lang">
+                        <input type="text" name="lang" id="lang" class="secA">
                     </div>
                     <div>
                         <label for="disa">Do you have a Disability?</label>
@@ -249,7 +249,7 @@
                     <div>
                         <label class="raise-lbl" for="details">If yes, please provide details</label>
                         <br>
-                        <textarea name="details" id="details" cols="35" rows="2"></textarea>
+                        <textarea name="details" id="details" cols="35" rows="2" class="txtarea"></textarea>
                     </div>    
                 </section>
                 
@@ -262,15 +262,15 @@
                 <section class="legislation-req">
                     <div>
                         <label for="permitNo">Permit Number</label>
-                        <input type="number" name="permitNo" id="permitNo">
+                        <input type="number" name="permitNo" id="permitNo" class="secA">
                     </div>
                     <div>
                         <label for="type">Type of Permit</label>
-                        <input type="number" name="type" id="type">
+                        <input type="number" name="type" id="type" class="secA">
                     </div>
                     <div>
                         <label for="expDate">Permit Expiry Date</label>
-                        <input type="date" name="expDate" id="expDate">
+                        <input type="date" name="expDate" id="expDate" class="secA">
                     </div>
                 </section>
                 
@@ -299,7 +299,7 @@
                         <label for="web">Website</label>
                         <input type="checkbox" name="hear" id="web">                    
                         <label for="other">Other</label>
-                        <input type="text" name="hear" id="other">
+                        <input type="text" name="hear" id="other" class="secA">
                     </div>
 
                 </section>
@@ -309,15 +309,15 @@
                     <section class="legislation-req">
                         <div>
                             <label for="sName">School Name</label>
-                            <input type="text" name="sName" id="sName">
+                            <input type="text" name="sName" id="sName" class="secA">
                         </div>
                         <div>
                             <label for="suburb">Suburb</label>
-                            <input type="text" name="suburb" id="suburb">
+                            <input type="text" name="suburb" id="suburb" class="secA">
                         </div>
                         <div>
                             <label for="city">City</label>
-                            <input type="text" name="city" id="city">
+                            <input type="text" name="city" id="city" class="secA">
                         </div>                   
                     </section>
                 </div>
@@ -332,7 +332,7 @@
                         <option value="EFT">EFT / e-payment</option>
                         <option for="creds" value="CreditAccount">Credit on account : R</option>                                
                     </select>
-                    <input type="number" name="creds" id="creds" placeholder="Specify Credit on Account Amount">       
+                    <input type="number" name="creds" id="creds" class="secA" placeholder="Specify Credit on Account Amount">       
                 </div>
                 <aside>
                     <h5 style="font-size: larger; margin-top: 1em;">Bank Details</h5>
@@ -353,12 +353,13 @@
 
                 <h3>Section C: Academic Programme Details</h3>
                 <p>Please tick the programme for which you wish to register</p>
+                <hr>
                 <label for="uProgram"><b>Undergraduate Programmes</b></label>
                 <br>
                 <div class="legislation-req">                    
                     <div style="margin-bottom: 2em;">
-                        <button id="btntest" onclick="setProgramme()">test</button>
-                        <select name="uProgram" id="uProgram">
+                        
+                        <select name="uProgram" id="uProgram" class="prgInput">
                             <option hidden selected>---Choose a programme---</option>
                             <option value="HCMarketing">Higher Certificate in Marketing</option>
                             <option value="HCProjectManagement">Higher Certificate in Project Management</option>
@@ -371,21 +372,24 @@
                             <option value="">None</option>
                         </select>
                     </div>
+                    
                     <div>
                         <label for="elec">Elective</label>
-                        <input type="text" name="elec" id="elec">
+                        <input type="text" name="elec" id="elec" class="secA">
                     </div>
                     <div>
 
                         <label for="otherprogram">Other</label>
-                        <input type="text" name="otherprogram" id="otherprogram">
+                        <input type="text" name="otherprogram" id="otherprogram" class="secA">
                     </div>
+                    
                 </div>
+                <hr>
                 <label for="pProgram"><b>Postgraduate Programmes (Only to be completed once a Postgraduate Application has been approved)</b></label>
                 <br>
                 <div class="legislation-req">
                     
-                    <select name="pProgram" id="pProgram">
+                    <select name="pProgram" id="pProgram" class="prgInput">
                         <option hidden selected>---Choose a programme---</option>
                         <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
                         <option value="mPhilMarketing">MPhil in Marketing</option>
@@ -397,9 +401,10 @@
                     <div></div>
                     <div>
                         <label for="otherpost">Other</label>
-                        <input type="text" name="otherpost" id="otherpost">
+                        <input type="text" name="otherpost" id="otherpost" class="secA">
                     </div>                    
-                </div>                  
+                </div>
+                <button id="btntest" onclick="setProgramme()">test</button>                  
 
                 <h3>Section D: Examination Module Details</h3>
                 <i>A maximum of four modules may be examined in one examination session</i>
@@ -439,7 +444,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="2">Semester 1</th>
+                            <th id="tblHeader" colspan="2">Semester 1</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -464,6 +469,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <hr>
                 <br><br>
                 <i>A maximum of four modules may be examined in one examination session</i>
                 <br>
@@ -498,6 +504,7 @@
                         </tr>
                     </tbody>
                 </table>
+                <hr>
 
             </form>
 
@@ -569,21 +576,7 @@
 
             <form action="">
                 <h2>Part 3: Student Declaration of Programme</h2>
-                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp<input type="text" name="set-programme" id="set-programme">&nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <input type="date" name="declarationDate" id="declarationDate"></p>
-                <!-- <label for="programmeChosen">Programme:</label> -->
-                <!-- <select name="programmeChosen" id="programmeChosen">
-                    <option value="SAQA ID: 118439">Higher Certificate in Marketing (SAQA ID: 118439)</option>
-                    <option value="SAQA ID: 118438">Higher Certificate in Project Management (SAQA ID: 118438)</option>
-                    <option value="SAQA ID: 117683">Higher Certificate in SUpply Chain Management (SAQA ID: 117683)</option>
-                    <option value="SAQA ID: 79546">Diploma in Marketing Management (SAQA ID: 79546)</option>
-                    <option value="SAQA ID: 118283">Bachelor of Business Administration (BBA) in Marketing Management (SAQA ID: 118283)</option>
-                    <option value="SAQA ID: 110628">Bachelor of Commerce in International Supply Chain Management (SAQA ID: 110628)</option>
-                    <option value="SAQA ID: 90737">Bachelor of Commerce (BCom) in Marketing and management Science (SAQA ID: 90737)</option>
-                    <option value="SAQA ID: 79846">Postgraduate Diploma in Marketing Management Science (SAQA ID: 79846)</option>
-                    <option value="SAQA ID: 79366">Bachelor of Philosophy (BPhil) Honours in Marketing Management (SAQA ID: 79366)</option>
-                    <option value="SAQA ID: 117085">Bachelor of Commerce (BCom) Honours in Supply Chain Management (SAQA ID: 117085)</option>
-                    <option value="SAQA ID: 86806">Masters of Philosophy (MPhil) in Marketing (SAQA ID: 86806)</option>                    
-                </select> -->
+                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp <label id="FirstName"></label> &nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
                 <p>
                     <ul>
                         <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>
@@ -600,13 +593,13 @@
                             <label for="staffName">IMM GS staff member name and surname:</label>
                         </li>
                         <li>
-                            <input type="text" name="staffName" id="staffName">
+                            <input type="text" name="staffName" id="staffName" class="secA">
                         </li>
                         <li>
                             <label for="officeDate">Date</label>                            
                         </li>
                         <li>
-                            <input type="date" name="officeDate" id="officeDate">
+                            <input type="date" name="officeDate" id="officeDate" class="secA">
                         </li>
                         <li>
                             <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>                           
@@ -620,7 +613,17 @@
                 <br><br>
 
                 <h4>COMMENTS</h4>
-                <textarea name="comments" id="comments" cols="100" rows="8"></textarea>
+                <textarea style="
+                    width: 99.7%;border: none;
+                    border-radius: 7px;
+                    border-bottom: solid 2px;
+                    opacity: 0.7;"
+                    name="comments" id="comments" rows="8">
+                </textarea>
+                <div id="submitdiv">
+                    <button type="submit" id="submitbtn">Submit</button>
+                </div>
+                
             </form>            
         </div>
     </div>

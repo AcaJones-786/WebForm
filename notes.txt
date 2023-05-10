@@ -8,6 +8,9 @@ Higher Certificate in Marketing
 ● Fundamentals of Supply Chain Management (FSCM101C – 20 credits)
 Prerequisites:
 None 
+
+
+
 Higher Certificate in Project Management
 ● Academic Literacy (AL101C - 15 credits)
 ● Fundamentals of Business Management (FBM101C - 20 credits)
@@ -19,6 +22,8 @@ credits)
 ● Project Management: Tools and Documents (PMTD101C – 20 credits) 
 Prerequisites:
 None 
+
+
 Higher Certificate in Supply Chain Management
 ● Academic Literacy (AL101C - 15 credits)
 ● Fundamentals of Business Management (FBM101C - 20 credits)
@@ -30,6 +35,10 @@ Higher Certificate in Supply Chain Management
 Prerequisites:
 None 
  
+
+
+
+
 Diploma in Marketing Management
 Year 1
 ● Academic Skills Development (ASD – non-credit bearing)
@@ -58,6 +67,13 @@ Principles of Digital Marketing before Application of Digital Mobile Marketing.
 Principles of Financial Management before Application Financial Management.
 Principles of Marketing before Application of Marketing.
 Application of Marketing before Strategic Marketing.
+
+
+
+
+
+
+
 Bachelor of Business Administration in Marketing Management
 Year 1
 ● Marketing 1 (MAR101B - 20 credits)
@@ -77,7 +93,7 @@ Year 2
 Year 3
 ● Marketing 3 (MAR303B - 20 credits)
 ● Business Management 3 (BM303B - 20 credits)
-● Financial Management 3 (FM303B - 20 credits
+● Financial Management 3 (FM303B - 20 credits)
 ● Marketing Research: Project ( RP302B - 20 credits)
 ● Elective 1
 ● Elective 2
@@ -96,6 +112,13 @@ Business Management 2 must be completed before Business Management 3.
 Marketing   Research   Theory   must   be   completed   before   Marketing   Research
 Project.
      
+
+
+
+
+
+
+
 M
 Bachelor of Commerce in International Supply Chain Management   
 Year 1
@@ -136,6 +159,21 @@ Procurement 2 before Procurement 3.
 Business Management 1 before Business Management 2. 
 Business Management 2 before Business Management 3.
 Financial Management 1 before Financial Management 2.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Bachelor of Commerce in Marketing and Management Science
 Year 1
 ● Academic Skills Development (ASD – non-credit bearing)

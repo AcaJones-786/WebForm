@@ -89,6 +89,20 @@ body{
     .secA:focus{
         opacity: 1;
     }
+    .txtarea{
+        border: none;
+        border-radius: 7px;
+        border-bottom: solid 2px;
+        opacity: 0.7;
+        width: 25em;
+    }
+    .prgInput{
+        border: none;
+        border-radius: 7px;
+        border-bottom: solid 2px;
+        opacity: 0.7;
+        width: 30em;
+    }
 
 }
 .wrapper{
@@ -110,20 +124,44 @@ table {
     width: 100%;
 }
 th, td {
-    border: 1px solid black;
-    padding: 8px;
+    border: 2px solid black;
     text-align: left;
 }
 th {
     background-color: #c4d8ff;
+    height: 1cm;
+}
+td{    
+    padding: 3px;
 }
 td > input{
     width: 24%;
     height: 1cm;
     font-size: small;
+    border-radius: 7px;
 }
 .hide{
     display: none;
+}
+#submitdiv{
+    text-align: center;
+}
+#submitbtn{
+    margin: 1em;
+    width: 5cm;
+    height: 2.5em;
+    border-radius: 15px;
+    font-size: large;
+    font-weight: 700;
+    background-color: #0C4B88;
+    color: whitesmoke;
+}
+#submitbtn:hover{
+    background-color: whitesmoke;
+    color: #0C4B88;
+}
+table{
+    
 }
 
 
