@@ -21,6 +21,7 @@ function getValue() {
           }
     }
 }
+
 //Okay so we have to include multiple years, i was thinking maybe we could do it
 //by like having buttons at the top above semester 1 that seperate the years.
 function setProgramme(){
@@ -107,7 +108,6 @@ function setProgramme(){
         // Create buttons
         var year1Button = document.createElement('button');
         year1Button.textContent = 'Year 1';
-        year1Button.click;
 
         var year2Button = document.createElement('button');
         year2Button.textContent = 'Year 2';

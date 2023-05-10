@@ -330,9 +330,9 @@
                         <option value="Credit">Credit / Direct Deposity (at IMM GS Office)</option>
                         <option value="Direct">Direct Deposit</option>
                         <option value="EFT">EFT / e-payment</option>
-                        <option for="creds" value="CreditAccount">Credit on account : R</option>                                
+                        <option value="CreditAccount">Credit on account : R</option>                                
                     </select>
-                    <input type="number" name="creds" id="creds" class="secA" placeholder="Specify Credit on Account Amount">       
+                    <input style="display: none; width: max-content;" type="number" name="creds" id="creds" class="secA" placeholder="R0.00">       
                 </div>
                 <aside>
                     <h5 style="font-size: larger; margin-top: 1em;">Bank Details</h5>
@@ -409,38 +409,7 @@
                 <h3>Section D: Examination Module Details</h3>
                 <i>A maximum of four modules may be examined in one examination session</i>
                 <br>
-                <!-- <div>
-                    <label for="sem1">Semester 1</label>
-                    <input type="text" name="sem1" id="one" placeholder="1">
-                    <input type="text" name="sem1" id="two" placeholder="2">
-                    <input type="text" name="sem1" id="three" placeholder="3">
-                    <input type="text" name="sem1" id="four" placeholder="4">
-                </div>
-                <br>
-                <div>
-                    <label for="sem2">Semester 2</label>                
-                    <input type="text" name="sem2" id="five" placeholder="5">
-                    <input type="text" name="sem2" id="six" placeholder="6">
-                    <input type="text" name="sem2" id="seven" placeholder="7">
-                    <input type="text" name="sem2" id="eight" placeholder="8">                    
-                </div>
-                <br><br>
-                <div>
-                    <label for="sem1L">Semester 1 (Lectures/Tutorials)</label>
-                    <p>SSC or Campus Name:</p>
-                    <input type="text" name="sem1L" id="one" placeholder="1">
-                    <input type="text" name="sem1L" id="two" placeholder="2">
-                    <input type="text" name="sem1L" id="three" placeholder="3">
-                    <input type="text" name="sem1L" id="four" placeholder="4">
-                </div>
-                <br>
-                <div>
-                    <label for="sem2L">Semester 2 (Lectures/Tutorials)</label>                
-                    <input type="text" name="sem2L" id="five" placeholder="5">
-                    <input type="text" name="sem2L" id="six" placeholder="6">
-                    <input type="text" name="sem2L" id="seven" placeholder="7">
-                    <input type="text" name="sem2L" id="eight" placeholder="8">                    
-                </div> -->
+
                 <table>
                     <thead>
                         <tr>
@@ -696,6 +665,27 @@
             </div>
         </section>
     </footer>
-    <script defer src="script/scipt.js"></script>
+    <script src="script/scipt.js"></script>
+    <script>
+        const selectElement = document.getElementById('proofpayment');
+        selectElement.addEventListener('change', function() {
+            // Function to run when the select statement changes
+            setPayment();
+        });
+        function setPayment(){
+            const selectedPayment = document.getElementById('proofpayment')
+            const selectedValue = selectedPayment.value;
+            var showElem = document.getElementById('creds')
+
+            if(selectedValue === 'CreditAccount')
+            {                
+                showElem.style.display='inline'
+            }
+            else
+            {
+                showElem.style.display='none'
+            }
+        }        
+    </script>
 </body>
 </html>
