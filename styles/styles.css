@@ -1,10 +1,78 @@
-body{
-    padding: 1em;
-}
+
 .wrapper{
     border: solid 3px;
 }
+@media screen and (max-width: 720px){
+    body{
+    }
+    .header>img{
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+    }
+    ul, ol{
+        list-style: none;
+        padding: 0;
+    }
+    #confirm_btn{
+        float: right;
+    }
+    #studNoIpt{
+        width: 10em;
+        margin: 1em 0 1em 0;
+    }
+    .file{
+        margin-bottom: 1em;
+        width: 100%;
+        border-bottom: solid 2px;
+    }
+    .sep_under{
+        display: grid;
+        margin-bottom: 0.5em;
+        background-color: rgb(210, 236, 247);
+        padding: 3px;
+        border-radius: 8px;
+    }
+    .banking-details{
+        border: solid 2px;
+        padding: 0 1em;
+    }
+    .prgInput{
+        width: 100%;
+    }
+    .tblInputs{
+        width: 98%;
+        margin-bottom: 1em;
+    }
+    .office-list>li{
+        margin-bottom: 0.5em;
+    }
+    .support-centres{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+    .support-centres>div{
+        background-image: linear-gradient(to bottom right, #b8d7f6 , #438dd6);
+        padding: 5px;
+        border-radius: 10px;
+    }
+    .secA{
+        border: none;
+        border-radius: 7px;
+        border-bottom: solid 2px;
+        opacity: 0.7;
+        height: 3em;
+    }
+    .secA:focus{
+        opacity: 1;
+    }
+}
 @media screen and (min-width: 720px) {
+    body{
+        padding: 1em;
+    }
     .header{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -103,7 +171,6 @@ body{
         opacity: 0.7;
         width: 30em;
     }
-
 }
 .wrapper{
     background-color: #b8d7f6;

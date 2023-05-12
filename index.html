@@ -15,8 +15,7 @@
             <h1>IMM Graduate School <span> <br> Registration Form <span id="year"></span></span></h1>            
         </section>
 
-
-        <form action="" onsubmit="return false;">
+        <form action="" onsubmit="return false;" id="introfrm">
             <p>Are you a new student?</p>
             <ul class="u-list">
                 <li>
@@ -28,16 +27,17 @@
                 </li>
                 <li class="hide">
                     <label for="studNo">Enter student number:</label>
-                    <input type="number" name="studNo" id="studNoIpt" maxlength="6">
+                    <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo">
                 </li>
                 <li class="hide">
-                    <label for="sem">Which semester are you registering for?</label>
-                    <select name="sem" id="sem">
+                    <label for="sem">Which semester are you registering for?</label> 
+                    <select name="sem" id="sem" class="rightGo">
                         <option value="1">1</option>
                         <option value="2">2</option>
                     </select>
                 </li>
             </ul>
+            <span style="display: none;" id="hi">Welcome prospective student!</span>
         </form>
     </header>
 
@@ -81,15 +81,15 @@
             <ul class="file-list">
                 <li>
                     <label for="pop">Proof of payment (as indicated in Section B: Payment Details)</label>
-                    <input type="file" name="pop" id="pop" class="input">
+                    <input type="file" name="pop" id="pop" class="input file">
                 </li>
                 <li>
                     <label for="id">Certified copy of ID Document</label>
-                    <input type="file" name="id" id="iD" class="input">
+                    <input type="file" name="id" id="iD" class="input file">
                 </li>
                 <li>
                     <label for="cert">Certified copy of highest schooling certificate (e.g. NSC), as well as any additional academic qualifications</label>
-                    <input type="file" name="cert" id="cert" class="input">
+                    <input type="file" name="cert" id="cert" class="input file">
                 </li>
             </ul>
             <hr>
@@ -99,15 +99,15 @@
                 <li>
                     <label for="gsce">GSCE / GCE other, namely</label>
                     <input type="text" name="gce" id="gce" class="secA">
-                    <input type="file" name="gsce" id="gsce" class="input">
+                    <input type="file" name="gsce" id="gsce" class="input file">
                 </li>
                 <li>
                     <label for="saqa">Certified copy of SAQA evaluation certificate (if writing examinations in South Africa)</label>
-                    <input type="file" name="saqa" id="saqa" class="input">
+                    <input type="file" name="saqa" id="saqa" class="input file">
                 </li>
                 <li>
                     <label for="permit">Relevant permit (if attending tutorials in South Africa)</label>
-                    <input type="file" name="permit" id="permit" class="input">
+                    <input type="file" name="permit" id="permit" class="input file">
                 </li>
             </ul>
             <hr>
@@ -116,9 +116,10 @@
             <form action="" onsubmit="return false;">
                 <h3>Section A: Personal Details (All Students)</h3>
                 <section class="personal-details">
-                    <div>
+                    <div class="sep_under">
                         <label for="title">Title</label>
                         <select name="title" id="title" class="input secA">
+                            <option value="">---select---</option>
                             <option value="Prof">Prof</option>
                             <option value="Dr">Dr</option>
                             <option value="Mr">Mr</option>
@@ -127,7 +128,7 @@
                             <option value="Miss">Miss</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="sep_under">
     
                         <label for="gender">Gender</label>
                         <select name="gender" id="gender" class="input secA">
@@ -135,51 +136,51 @@
                             <option value="Female">Female</option>
                         </select>
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="surname">Surname (As per Identity Document)</label>
                         <input type="text" name="surname" id="surname" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="pname">Preferred Name</label>
                         <input type="text" name="pname" id="pname" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="fname">First Name(s) (As per Identity Document)</label>
                         <input type="text" name="fname" id="fname" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="nationality">Nationality</label>
                         <input type="text" name="nationality" id="nationality" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="country">Resident Country</label>
                         <input type="text" name="country" id="country" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="idNo">Identity Document Number</label>
                         <input type="number" name="idNo" id="idNo" maxlength="13" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="dob">Date of Birth</label>
                         <input type="date" name="dob" id="dob" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="cell">Cell Phone No.</label>
                         <input type="number" name="cell" id="cell" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="tele">Telephone No. Work</label>
                         <input type="number" name="tele" id="tele" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="kin">Next of Kin</label>
                         <input type="number" name="kin" id="kin" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="email1">Email (1) (Complusory)</label>
                         <input type="email" name="email1" id="email1" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="email2">Email (2)</label>
                         <input type="email" name="email2" id="email2" class="input secA">
                     </div>
@@ -190,11 +191,11 @@
 
                 <h3>Address Details (new students only, unless details changed)</h3>
                 <section class="address-details">
-                    <div>
+                    <div class="sep_under">
                         <label for="paddress" class="raise-lbl">Postal Address</label>
                         <textarea class="input txtarea" name="paddress" id="paddress" cols="50" rows="2"></textarea>
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="code">Postal Code</label>
                         <input type="number" name="code" id="code" class="input secA">
                     </div>                    
@@ -203,19 +204,19 @@
 
                 <h3>Work Details (new students only, unless details changed)</h3>
                 <section class="work-details">
-                    <div>
+                    <div class="sep_under">
                         <label for="occupation">Occupation</label>
                         <input type="text" name="occupation" id="occupation" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="company">Company Name</label>
                         <input type="text" name="company" id="company" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="compAddress">Company Address</label>
                         <input type="text" name="compAddress" id="compAddress" class="input secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="compTel">Company Tel No.</label>
                         <input type="number" name="compTel" id="compTel" class="input secA">
                     </div>
@@ -225,6 +226,7 @@
                 <div>
                     <label for="ethnicity">*Ethnic Group</label>
                     <select name="ethnicity" id="ethnicity" class="secA">
+                        <option value="">---choose---</option>
                         <option value="Black">Black</option>
                         <option value="Coloured">Coloured</option>
                         <option value="Indian">Indian</option>
@@ -236,19 +238,20 @@
                     and the government to track progress of the transformation of Further & Higher Education.
                 </p>
                 <section class="legislation-req">
-                    <div>
-                        <label for="lang">Home Language</label>
-                        <br>
+                    <div class="sep_under">
+                        <label for="lang">Home Language<br></label>
+                        
                         <input type="text" name="lang" id="lang" class="secA">
                     </div>
-                    <div>
-                        <label for="disa">Do you have a Disability?</label>
-                        <br>
-                        <label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no">
+                    <div class="sep_under">
+                        <label for="disa">Do you have a Disability?<br></label>
+                        
+                        <div><label for="yes">Yes</label><input type="checkbox" name="disa" id="yes"><label for="no">No</label><input type="checkbox" name="disa" id="no"></div>
+                        
                     </div>
-                    <div>
-                        <label class="raise-lbl" for="details">If yes, please provide details</label>
-                        <br>
+                    <div class="sep_under">
+                        <label class="raise-lbl" for="details">If yes, please provide details<br></label>
+                        
                         <textarea name="details" id="details" cols="35" rows="2" class="txtarea"></textarea>
                     </div>    
                 </section>
@@ -260,22 +263,22 @@
                     African citizen and you are writing examinations in South Africa, please state the following:
                 </p>
                 <section class="legislation-req">
-                    <div>
+                    <div class="sep_under">
                         <label for="permitNo">Permit Number</label>
                         <input type="number" name="permitNo" id="permitNo" class="secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="type">Type of Permit</label>
                         <input type="number" name="type" id="type" class="secA">
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="expDate">Permit Expiry Date</label>
                         <input type="date" name="expDate" id="expDate" class="secA">
                     </div>
                 </section>
                 
                 <section>
-                    <div style="margin-top: 20px;">
+                    <div style="margin-top: 20px;" class="sep_under">
                         <label for="comms"><i>Choose the communication channel for receiving general notifications: &nbsp&nbsp&nbsp </i></label>
                         <div class="disp-inline">                            
                             <label for="sms">SMS</label>
@@ -290,16 +293,24 @@
                             <input type="checkbox" name="comms" id="both">
                         </div>                  
                     </div>
-                    <div>
+                    <div class="sep_under">
                         <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only: &nbsp&nbsp&nbsp</i></label>
-                        <label for="ad">Advertisements</label>
-                        <input type="checkbox" name="hear" id="ad">
-                        <label for="word">Word of Mouth</label>
-                        <input type="checkbox" name="hear" id="word">
-                        <label for="web">Website</label>
-                        <input type="checkbox" name="hear" id="web">                    
-                        <label for="other">Other</label>
-                        <input type="text" name="hear" id="other" class="secA">
+                        <div>
+                            <label for="ad">Advertisements</label>
+                            <input type="checkbox" name="hear" id="ad">
+                        </div>
+                        <div>
+                            <label for="word">Word of Mouth</label>
+                            <input type="checkbox" name="hear" id="word">
+                        </div>
+                        <div>
+                            <label for="web">Website</label>
+                            <input type="checkbox" name="hear" id="web">  
+                        </div>
+                        <div>
+                            <label for="other">Other</label>
+                            <input type="text" name="hear" id="other" class="secA">
+                        </div>             
                     </div>
 
                 </section>
@@ -307,15 +318,15 @@
                 <div>
                     <p>Where did you attend school?</p>
                     <section class="legislation-req">
-                        <div>
+                        <div class="sep_under">
                             <label for="sName">School Name</label>
                             <input type="text" name="sName" id="sName" class="secA">
                         </div>
-                        <div>
+                        <div class="sep_under">
                             <label for="suburb">Suburb</label>
                             <input type="text" name="suburb" id="suburb" class="secA">
                         </div>
-                        <div>
+                        <div class="sep_under">
                             <label for="city">City</label>
                             <input type="text" name="city" id="city" class="secA">
                         </div>                   
@@ -324,7 +335,7 @@
 
                 <h3>Section B: Payment Details</h3>
                 <h6>NOTE <br>NO CASH PAYMENTS ARE ACCEPTED AT ANY IMM Graduate School OFFICE</h6>
-                <div>
+                <div class="sep_under">
                     <label for="proofpayment">The following proof of payment uploaded is:</label>
                     <select name="proofpayment" id="proofpayment">
                         <option value="Credit">Credit / Direct Deposity (at IMM GS Office)</option>
@@ -357,7 +368,7 @@
                 <label for="uProgram"><b>Undergraduate Programmes</b></label>
                 <br>
                 <div class="legislation-req">                    
-                    <div style="margin-bottom: 2em;">
+                    <div style="margin-bottom: 2em;"  class="sep_under">
                         
                         <select name="uProgram" id="uProgram" class="prgInput">
                             <option hidden selected>---Choose a programme---</option>
@@ -373,12 +384,11 @@
                         </select>
                     </div>
                     
-                    <div>
+                    <div class="sep_under">
                         <label for="elec">Elective</label>
                         <input type="text" name="elec" id="elec" class="secA">
                     </div>
-                    <div>
-
+                    <div class="sep_under">
                         <label for="otherprogram">Other</label>
                         <input type="text" name="otherprogram" id="otherprogram" class="secA">
                     </div>
@@ -389,7 +399,8 @@
                 <br>
                 <div class="legislation-req">
                     
-                    <select name="pProgram" id="pProgram" class="prgInput">
+                                       
+                    <div class="sep_under"><select name="pProgram" id="pProgram" class="prgInput">
                         <option hidden selected>---Choose a programme---</option>
                         <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
                         <option value="mPhilMarketing">MPhil in Marketing</option>
@@ -397,9 +408,8 @@
                         <option value="bphilmarketingManagementHon">BPhil Honours in Marketing Management</option>
                         <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>                        
                         <option value="">None</option>
-                    </select>                    
-                    <div></div>
-                    <div>
+                    </select> </div>
+                    <div class="sep_under">
                         <label for="otherpost">Other</label>
                         <input type="text" name="otherpost" id="otherpost" class="secA">
                     </div>                    
@@ -419,10 +429,10 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="text" name="sem1" id="one" placeholder="1">
-                                <input type="text" name="sem1" id="two" placeholder="2">
-                                <input type="text" name="sem1" id="three" placeholder="3">
-                                <input type="text" name="sem1" id="four" placeholder="4">
+                                <input type="text" name="sem1" id="one" placeholder="1" class="tblInputs">
+                                <input type="text" name="sem1" id="two" placeholder="2" class="tblInputs">
+                                <input type="text" name="sem1" id="three" placeholder="3" class="tblInputs">
+                                <input type="text" name="sem1" id="four" placeholder="4" class="tblInputs">
                             </td>
                         </tr>
                         <tr>
@@ -430,10 +440,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="sem2" id="five" placeholder="5">
-                                <input type="text" name="sem2" id="six" placeholder="6">
-                                <input type="text" name="sem2" id="seven" placeholder="7">
-                                <input type="text" name="sem2" id="eight" placeholder="8"> 
+                                <input type="text" name="sem2" id="five" placeholder="5" class="tblInputs">
+                                <input type="text" name="sem2" id="six" placeholder="6" class="tblInputs">
+                                <input type="text" name="sem2" id="seven" placeholder="7" class="tblInputs">
+                                <input type="text" name="sem2" id="eight" placeholder="8" class="tblInputs"> 
                             </td>
                         </tr>
                     </tbody>
@@ -454,10 +464,10 @@
                     <tbody>
                         <tr>
                             <td>
-                                <input type="text" name="sem1" id="nine" placeholder="1">
-                                <input type="text" name="sem1" id="ten" placeholder="2">
-                                <input type="text" name="sem1" id="eleven" placeholder="3">
-                                <input type="text" name="sem1" id="twelve" placeholder="4">
+                                <input type="text" name="sem1" id="nine" placeholder="1" class="tblInputs">
+                                <input type="text" name="sem1" id="ten" placeholder="2" class="tblInputs">
+                                <input type="text" name="sem1" id="eleven" placeholder="3" class="tblInputs">
+                                <input type="text" name="sem1" id="twelve" placeholder="4" class="tblInputs">
                             </td>
                         </tr>
                         <tr>
@@ -465,10 +475,10 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="text" name="sem2" id="thirteen" placeholder="5">
-                                <input type="text" name="sem2" id="fourteen" placeholder="6">
-                                <input type="text" name="sem2" id="fifteen" placeholder="7">
-                                <input type="text" name="sem2" id="sixteen" placeholder="8"> 
+                                <input type="text" name="sem2" id="thirteen" placeholder="5" class="tblInputs">
+                                <input type="text" name="sem2" id="fourteen" placeholder="6" class="tblInputs">
+                                <input type="text" name="sem2" id="fifteen" placeholder="7" class="tblInputs">
+                                <input type="text" name="sem2" id="sixteen" placeholder="8" class="tblInputs"> 
                             </td>
                         </tr>
                     </tbody>
@@ -514,7 +524,7 @@
                 <p>I <span id="consentFname">first</span><span id="consentLname">second</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
                 <div class="signature">
                     <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                    <input type="file" name="consent" id="consent">   
+                    <input type="file" name="consent" id="consent" class="file">   
                 </div>                
 
                 <hr>
@@ -557,7 +567,7 @@
             <form action="">
                 <h4>OFFICE USE</h4>
                 <div>
-                    <ul class="office-list">
+                    <ul class="office-list sep_under">
                         <li>
                             <label for="staffName">IMM GS staff member name and surname:</label>
                         </li>
@@ -574,7 +584,7 @@
                             <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>                           
                         </li>
                         <li>
-                            <input type="file" name="consent" id="consent"> 
+                            <input type="file" name="consent" id="consent" class="file"> 
                         </li>
                     </ul>
                 </div>
@@ -687,5 +697,6 @@
             }
         }        
     </script>
+    <script src="script/script2.js"></script>
 </body>
 </html>

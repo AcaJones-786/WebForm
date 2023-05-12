@@ -4,26 +4,34 @@ function addYearToSpan() {
     const currentYear = new Date().getFullYear();
     spanElement.textContent = currentYear;
 }
-
+var welcomeSpan = document.getElementById('hi')
 function getValue() {
     const radioValue = document.querySelector('input[name="student_type"]:checked').value;
     const elements = document.getElementsByClassName('hide');
-    // console.log(radioValue);
+    console.log(radioValue);
 
     if (radioValue === 'newST') {        
         for (let i = 0; i < elements.length; i++) {
           elements[i].style.display = 'none';
         }
+        welcomeSpan.style.display='grid';
     }
     else if (radioValue === 'oldST'){
         for (let i = 0; i < elements.length; i++) {
             elements[i].style.display = 'block';
-          }
+        }
+        welcomeSpan.style.display='none';
     }
 }
 
 //Okay so we have to include multiple years, i was thinking maybe we could do it
 //by like having buttons at the top above semester 1 that seperate the years.
+var year1Button;
+var year1Button;
+var year1Button;
+var prerequisitesButton;
+
+
 function setProgramme(){
     const selectedOption = document.getElementById('uProgram');
     const selectedValue = selectedOption.value;
@@ -106,16 +114,16 @@ function setProgramme(){
         // button_group.appendChild(prerequisitesLabel);
 
         // Create buttons
-        var year1Button = document.createElement('button');
+        year1Button = document.createElement('button');
         year1Button.textContent = 'Year 1';
 
-        var year2Button = document.createElement('button');
+        year2Button = document.createElement('button');
         year2Button.textContent = 'Year 2';
 
-        var year3Button = document.createElement('button');
+        year3Button = document.createElement('button');
         year3Button.textContent = 'Year 3';
 
-        var prerequisitesButton = document.createElement('button');
+        prerequisitesButton = document.createElement('button');
         prerequisitesButton.textContent = 'Prerequisites';
 
         // Append buttons to the container
@@ -175,6 +183,55 @@ function setProgramme(){
         document.getElementById('six').value="";
         document.getElementById('seven').value="";
         document.getElementById('eight').value="Prerequisites: None";
+    }
+}
+function SortYear(year){
+    const selectedOption = document.getElementById('uProgram');
+    const selectedValue = selectedOption.value;
+    
+    if(selectedValue === 'DipMarketingManagement' && year == '2')
+    {
+        document.getElementById('one').value="Marketing 2 (MAR202B - 20 credits)";
+        document.getElementById('two').value="Brand Management (BM201B - 20 credits)";
+        document.getElementById('three').value="Business Management 2 (BM202B - 20 credits)";
+        document.getElementById('four').value="Financial Management 2 (FM202B - 20 credits)";
+        document.getElementById('five').value="Integrated Marketing Communications (IMC201B - 20 credits)";
+        document.getElementById('six').value="Research: Theory (RT201B – 20 credits)";
+        document.getElementById('seven').value="----";
+        document.getElementById('eight').value="Prerequisites: None";
+    }
+    else if(selectedValue === 'DipMarketingManagement' && year == '1')
+    {
+        document.getElementById('one').value="Marketing 1 (MAR101B - 20 credits)";
+        document.getElementById('two').value="Academic Skills Development (ASD - non-credit bearing)";
+        document.getElementById('three').value="Business Communication (BC101B - 20 credits)";
+        document.getElementById('four').value="Business Management 1 (BM101B - 20 credits)";
+        document.getElementById('five').value="Business Statistics (BS101B - 20 credits)";
+        document.getElementById('six').value="Economic Principles (ECOP101B - 20 credits)";
+        document.getElementById('seven').value="Financial Management 1 (FM101B - 20 credits)";
+        document.getElementById('eight').value="----";
+    }
+    else if(selectedValue === 'DipMarketingManagement' && year == '3')
+    {
+        document.getElementById('one').value="Marketing 3 (MAR303B - 20 credits)";
+        document.getElementById('two').value="Business Management 3 (BM303B - 20 credits)";
+        document.getElementById('three').value="Financial Management 3 (FM303B - 20 credits)";
+        document.getElementById('four').value="Marketing Research: Project ( RP302B - 20 credits)";
+        document.getElementById('five').value="Elective: Business-to-Business Marketing (BBM001B - 20 credits)";
+        document.getElementById('six').value="Elective: Digital Marketing Applications (DMA001B - 20 credits)";
+        document.getElementById('seven').value="Elective: Retail Marketing (RM001B - 20 credits)";
+        document.getElementById('eight').value="Prerequisites: ";
+    }
+    else if(selectedValue === 'DipMarketingManagement' && year == 'pre')
+    {
+        document.getElementById('one').value="";
+        document.getElementById('two').value="";
+        document.getElementById('three').value="";
+        document.getElementById('four').value="";
+        document.getElementById('five').value="";
+        document.getElementById('six').value="";
+        document.getElementById('seven').value="";
+        document.getElementById('eight').value="----";
     }
 }
 
