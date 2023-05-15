@@ -127,6 +127,9 @@ fieldset{
     .wrapper, header, footer{
         
     }
+    #logo_img{
+        border-radius: 25px;
+    }
     
     .header{
         display: grid;
