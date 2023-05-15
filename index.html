@@ -12,49 +12,55 @@
     <header>
         <section class="header">
             <img src="images/IMM.png" alt="">
-            <h1>IMM Graduate School <span> <br> Registration Form <span id="year"></span></span></h1>            
+            <div class="titleHeading">
+                <h1 id="main_header">IMM Graduate School <br> <h3>Registration Form <span id="year"></span></h1>  </h3> 
+            </div>                      
         </section>
 
         <form action="" onsubmit="return false;" id="introfrm">
-            <p>Are you a new student?</p>
-            <ul class="u-list">
-                <li>
-                    <label for="newStudrad">New Student</label>
-                    <input type="radio" name="student_type" value="newST" id="newStudrad">
-                    <label for="renewStudrad">Renewal Student</label>
-                    <input type="radio" name="student_type" value="oldST" id="renewStudrad">
-                    <button id="confirm_btn" onclick="getValue()">Confirm</button>
-                </li>
-                <li class="hide">
-                    <label for="studNo">Enter student number:</label>
-                    <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo">
-                </li>
-                <li class="hide">
-                    <label for="sem">Which semester are you registering for?</label> 
-                    <select name="sem" id="sem" class="rightGo">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                    </select>
-                </li>
-            </ul>
-            <span style="display: none;" id="hi">Welcome prospective student!</span>
+            <fieldset>
+                <p>Are you a new student?</p>
+                <ul class="u-list">
+                    <li>
+                        <label for="newStudrad">New Student</label>
+                        <input type="radio" name="student_type" value="newST" id="newStudrad">
+                        <label for="renewStudrad">Renewal Student</label>
+                        <input type="radio" name="student_type" value="oldST" id="renewStudrad">                        
+                    </li>
+                    <li><button id="confirm_btn" onclick="getValue()">Confirm</button></li>
+                    <li class="hide">
+                        <label for="studNo">Enter student number:</label>
+                        <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo">
+                    </li>
+                    <li class="hide">
+                        <label for="sem">Which semester are you registering for?</label> 
+                        <select name="sem" id="sem" class="rightGo">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </li>
+                </ul>
+                <span style="display: none;" id="hi">Welcome prospective student!</span>
+            </fieldset>
         </form>
     </header>
 
     <div class="wrapper">
-        <hr>
-        <ul>
-            <li style="margin-bottom: 1em;">This registration form consists of three parts;</li>
-            <li>Part 1 - Registration Form (Pages 1-2); </li>
-            <li>Part 2 - Student Declaration; </li>
-            <li style="margin-bottom: 1em;">Part 3 - Programme Declaration</li>
-            <li>
-                Students wishing to support their distance learning with sessions, 
-                must complete the Learning Pathway Registration Form
-            </li>
-        </ul>
-        <hr>
-        <div>
+<form action="">
+    <hr>
+    <p style="margin-bottom: 1em;">This registration form consists of three parts;</p>
+    <ul>            
+        <li>Part 1 - Registration Form (Pages 1-2); </li>
+        <li>Part 2 - Student Declaration; </li>
+        <li style="margin-bottom: 1em;">Part 3 - Programme Declaration</li>
+    </ul>
+    <p>
+            Students wishing to support their distance learning with sessions, 
+            must complete the Learning Pathway Registration Form
+        </p>
+    <hr>
+    <div>
+        <fieldset>
             <h2>Part 1</h2>
             <h5>
                 PLEASE READ THE FOLLOWING INSTRUCTIONS BEFORE COMPLETING THIS FORM
@@ -113,11 +119,13 @@
                     <input type="file" name="permit" id="permit" class="input file">
                 </li>
             </ul>
-            <hr>
-        </div>
-        <div>
-            <form action="" onsubmit="return false;">
-                <h3>Section A: Personal Details (All Students)</h3>
+        </fieldset>
+        <hr>
+    </div>
+    <div>
+        <form action="" onsubmit="return false;">
+            <h3>Section A: Personal Details (All Students)</h3>
+            <fieldset>
                 <section class="personal-details">
                     <div class="sep_under">
                         <label for="title">Title</label>
@@ -188,11 +196,13 @@
                         <input type="email" name="email2" id="email2" class="input secA">
                     </div>
                 </section>
-                
+            </fieldset>
+            
 
-                <hr>
+            <hr>
 
-                <h3>Address Details (new students only, unless details changed)</h3>
+            <h3>Address Details (new students only, unless details changed)</h3>
+            <fieldset>
                 <section class="address-details">
                     <div class="sep_under">
                         <label for="paddress" class="raise-lbl">Postal Address</label>
@@ -203,9 +213,11 @@
                         <input type="number" name="code" id="code" class="input secA">
                     </div>                    
                 </section>
+            </fieldset>
 
 
-                <h3>Work Details (new students only, unless details changed)</h3>
+            <h3>Work Details (new students only, unless details changed)</h3>
+            <fieldset>
                 <section class="work-details">
                     <div class="sep_under">
                         <label for="occupation">Occupation</label>
@@ -224,8 +236,10 @@
                         <input type="number" name="compTel" id="compTel" class="input secA">
                     </div>
                 </section>
+            </fieldset>
 
-                <h3>Legislation Requirements (new students only, unless details changed)</h3>
+            <h3>Legislation Requirements (new students only, unless details changed)</h3>
+            <fieldset>
                 <div>
                     <label for="ethnicity">*Ethnic Group</label>
                     <select name="ethnicity" id="ethnicity" class="secA">
@@ -312,7 +326,7 @@
                         </div>
                         <div>
                             <label for="other">Other</label>
-                            <input type="text" name="hear" id="other" class="secA">
+                            <input type="text" name="hear" id="other" class="secA gce">
                         </div>             
                     </div>
 
@@ -335,12 +349,15 @@
                         </div>                   
                     </section>
                 </div>
+            </fieldset>
 
-                <h3>Section B: Payment Details</h3>
+            <h3>Section B: Payment Details</h3>
+            
+            <fieldset>
                 <h6>NOTE <br>NO CASH PAYMENTS ARE ACCEPTED AT ANY IMM Graduate School OFFICE</h6>
                 <div class="sep_under">
                     <label for="proofpayment">The following proof of payment uploaded is:</label>
-                    <select name="proofpayment" id="proofpayment">
+                    <select name="proofpayment" id="proofpayment" class="secA">
                         <option value="Credit">Credit / Direct Deposity (at IMM GS Office)</option>
                         <option value="Direct">Direct Deposit</option>
                         <option value="EFT">EFT / e-payment</option>
@@ -364,8 +381,10 @@
                         <i>Indicate your full name and surname or your IMM Graduate School student number as reference</i>
                     </div>
                 </aside>
+            </fieldset>
 
-                <h3>Section C: Academic Programme Details</h3>
+            <h3>Section C: Academic Programme Details</h3>
+            <fieldset>
                 <p>Please tick the programme for which you wish to register</p>
                 <hr>
                 <label for="uProgram"><b>Undergraduate Programmes</b></label>
@@ -373,7 +392,7 @@
                 <div class="legislation-req">                    
                     <div style="margin-bottom: 2em;"  class="sep_under">
                         
-                        <select name="uProgram" id="uProgram" class="prgInput">
+                        <select name="uProgram" id="uProgram" class="prgInput secA">
                             <option hidden selected>---Choose a programme---</option>
                             <option value="HCMarketing">Higher Certificate in Marketing</option>
                             <option value="HCProjectManagement">Higher Certificate in Project Management</option>
@@ -403,7 +422,7 @@
                 <div class="legislation-req">
                     
                                        
-                    <div class="sep_under"><select name="pProgram" id="pProgram" class="prgInput">
+                    <div class="sep_under"><select name="pProgram" id="pProgram" class="prgInput secA">
                         <option hidden selected>---Choose a programme---</option>
                         <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
                         <option value="mPhilMarketing">MPhil in Marketing</option>
@@ -417,198 +436,215 @@
                         <input type="text" name="otherpost" id="otherpost" class="secA">
                     </div>                    
                 </div>
-                <button id="btntest" onclick="setProgramme()">test</button>                  
+                <button id="btntest" onclick="setProgramme()">test</button>  
+            </fieldset>                
 
-                <h3>Section D: Examination Module Details</h3>
+            <h3>Section D: Examination Module Details</h3>
+            <fieldset>
                 <i>A maximum of four modules may be examined in one examination session</i>
-                <br>
+            <br>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th id="tblHeader" colspan="2">Semester 1</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input type="text" name="sem1" id="one" placeholder="1" class="tblInputs">
-                                <input type="text" name="sem1" id="two" placeholder="2" class="tblInputs">
-                                <input type="text" name="sem1" id="three" placeholder="3" class="tblInputs">
-                                <input type="text" name="sem1" id="four" placeholder="4" class="tblInputs">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Semester 2</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" name="sem2" id="five" placeholder="5" class="tblInputs">
-                                <input type="text" name="sem2" id="six" placeholder="6" class="tblInputs">
-                                <input type="text" name="sem2" id="seven" placeholder="7" class="tblInputs">
-                                <input type="text" name="sem2" id="eight" placeholder="8" class="tblInputs"> 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr>
-                <br><br>
-                <i>A maximum of four modules may be examined in one examination session</i>
-                <br>
-                <table>
-                    <thead>
-                        <tr>
-                            <th colspan="2">Semester 1 (lectures/Tutorial)</th>
-                        </tr>
-                        <tr>
-                            <th colspan="2">SSC or Campus Name:</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <input type="text" name="sem1" id="nine" placeholder="1" class="tblInputs">
-                                <input type="text" name="sem1" id="ten" placeholder="2" class="tblInputs">
-                                <input type="text" name="sem1" id="eleven" placeholder="3" class="tblInputs">
-                                <input type="text" name="sem1" id="twelve" placeholder="4" class="tblInputs">
-                            </td>
-                        </tr>
-                        <tr>
-                            <th colspan="2">Semester 2 (lectures/Tutorial)</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" name="sem2" id="thirteen" placeholder="5" class="tblInputs">
-                                <input type="text" name="sem2" id="fourteen" placeholder="6" class="tblInputs">
-                                <input type="text" name="sem2" id="fifteen" placeholder="7" class="tblInputs">
-                                <input type="text" name="sem2" id="sixteen" placeholder="8" class="tblInputs"> 
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <hr>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="tblHeader" colspan="2">Semester 1</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name="sem1" id="one" placeholder="1" class="tblInputs">
+                            <input type="text" name="sem1" id="two" placeholder="2" class="tblInputs">
+                            <input type="text" name="sem1" id="three" placeholder="3" class="tblInputs">
+                            <input type="text" name="sem1" id="four" placeholder="4" class="tblInputs">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Semester 2</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="sem2" id="five" placeholder="5" class="tblInputs">
+                            <input type="text" name="sem2" id="six" placeholder="6" class="tblInputs">
+                            <input type="text" name="sem2" id="seven" placeholder="7" class="tblInputs">
+                            <input type="text" name="sem2" id="eight" placeholder="8" class="tblInputs"> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <br><br>
+            <i>A maximum of four modules may be examined in one examination session</i>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Semester 1 (lectures/Tutorial)</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">SSC or Campus Name:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name="sem1" id="nine" placeholder="1" class="tblInputs">
+                            <input type="text" name="sem1" id="ten" placeholder="2" class="tblInputs">
+                            <input type="text" name="sem1" id="eleven" placeholder="3" class="tblInputs">
+                            <input type="text" name="sem1" id="twelve" placeholder="4" class="tblInputs">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Semester 2 (lectures/Tutorial)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="sem2" id="thirteen" placeholder="5" class="tblInputs">
+                            <input type="text" name="sem2" id="fourteen" placeholder="6" class="tblInputs">
+                            <input type="text" name="sem2" id="fifteen" placeholder="7" class="tblInputs">
+                            <input type="text" name="sem2" id="sixteen" placeholder="8" class="tblInputs"> 
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            </fieldset>
 
-            </form>
-
-            <form action="">
-                <h2>Part 2: Student Declaration</h2>
-                <h5>Academic Integrity declaration by student</h5>
-                <p>
-                    I hereby acknowledge and agree to the Academic Integrity Statement as 
-                    set out below and I further acknowledge that this Academix Integrity 
-                    Statement applies for the duration of my studies at the IMM Graduate School
-                </p>
-                <ol>
-                    <li>I will not receive nor will I elicit any assistance from/to anothere student in the process of completion of any assessment.</li>
-                    <li>
-                        I understand that academic discussions with other students are encouraged, 
-                        but not to provide answers to assessment questions in the process of completion of an assessment. 
-                        Therefore my assessment answers will be entirely my own work and not the work of other students, 
-                        regardless of any academic discussions I was part of
-                    </li>
-                    <li>
-                        I will not plagiarise the work of others and submit it as my own, 
-                        nor will I self-plagiarise using excerpts from work I may have submitted previously 
-                        for assessment whether at the IMM Graduate School or any other insitution. 
-                        I revognise that I am responsible for understanding and applying the provisions of the 
-                        IMM Graduate School Policy on Plagiarism Prevention.
-                    </li>
-                    <li>I will not outsource any academic work to a third party by allowing someone else to contribute to or complete assessments on my behalf.</li>
-                    <li>
-                        I understand and acknowledge that any act of academic dishonesty may result 
+        
+            <h2>Part 2: Student Declaration</h2>
+        <fieldset>
+            <h5>Academic Integrity declaration by student</h5>
+            <p>
+                I hereby acknowledge and agree to the Academic Integrity Statement as 
+                set out below and I further acknowledge that this Academix Integrity 
+                Statement applies for the duration of my studies at the IMM Graduate School
+            </p>
+            <ol>
+                <li>
+                    <p>I will not receive nor will I elicit any assistance from/to anothere student in the process of completion of any assessment.</p>
+                </li>
+                <li>
+                    <p>I understand that academic discussions with other students are encouraged, 
+                        but not to provide answers to assessment questions in the process of completion of an assessment. </p>                        
+                </li>
+                <li>
+                    <p>Therefore my assessment answers will be entirely my own work and not the work of other students, 
+                        regardless of any academic discussions I was part of</p>
+                </li>
+                <li>
+                    <p>I will not plagiarise the work of others and submit it as my own, 
+                        nor will I self-plagiarise using excerpts from work I may have submitted previously for assessment whether at the IMM Graduate School or any other insitution. </p>
+                </li>
+                <li>
+                    <p>
+                    I revognise that I am responsible for understanding and applying the provisions of the 
+                    IMM Graduate School Policy on Plagiarism Prevention.</p>
+                </li>
+                <li>
+                    <p>I will not outsource any academic work to a third party by allowing someone else to contribute to or complete assessments on my behalf.</p>
+                </li>
+                <li>
+                    <p>I understand and acknowledge that any act of academic dishonesty may result 
                         in academic miscoduct procedures being instituted against me to its full extent 
-                        as prescribed by IMM Graduate School policies. If found to have breached the 
-                        IMM Graduate School policies, I will submit to the academic inquiry process and 
-                        ackowledge that an outcome of this process may lead to me receiving zero percent 
-                        of an assessment, or even that I may be disenrolled
-                    </li>
-                </ol>
+                        as prescribed by IMM Graduate School policies.</p>                        
+                </li>
+                <li>
+                    <p>If found to have breached the 
+                    IMM Graduate School policies, I will submit to the academic inquiry process and 
+                    ackowledge that an outcome of this process may lead to me receiving zero percent 
+                    of an assessment, or even that I may be disenrolled</p>
+                </li>
+            </ol>
 
-                <p>I <span id="consentFname">first</span><span id="consentLname">second</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
-                <div class="signature">
-                    <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                    <input type="file" name="consent" id="consent" class="file">   
-                </div>                
+            <p>I <span id="consentFname">_______</span><span id="consentLname"> __________</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
+            <div class="signature">
+                <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
+                <input type="file" name="consent" id="consent" class="file">   
+            </div>                
 
-                <hr>
+            <hr>
 
-                <h5>General Declaration</h5>
-                <ul>
-                    <li>I have read the IMM Graduate School Prospectus and Yearbook.</li>
-                    <li>
-                        The IMM Graduate School does not endorsse third parties who offer the tuition on IMM Graduate School programmes. 
+            <h5>General Declaration</h5>
+            <ul>
+                <li>I have read the IMM Graduate School Prospectus and Yearbook.</li>
+                <li>
+                    <p>The IMM Graduate School does not endorsse third parties who offer the tuition on IMM Graduate School programmes. 
                         Should an IMM Gradute School student enrol with any third party for tuition on IMM Graduate School programmes, 
-                        the IMM Graduate School will be entitled to suspend the student's registration with the IMM Graduate School
-                    </li>
-                    <li>
-                        I understand and accept that all policies and procedures pertaining to the IMM Graduate School, including the IMM Graduate School's examination policy, and agree to abide by the rules stated therein.
-                    </li>
-                    <li>
-                        I understannd and accept that upon my acceptance to the IMM Graduate School, 
+                        the IMM Graduate School will be entitled to suspend the student's registration with the IMM Graduate School</p>
+                </li>
+                <li>
+                    <p>I understand and accept that all policies and procedures pertaining to the IMM Graduate School, including the IMM Graduate School's examination policy, and agree to abide by the rules stated therein.</p>
+                </li>
+                <li>
+                    <p>I understannd and accept that upon my acceptance to the IMM Graduate School, 
                         I immediately become liable to the IMM Graduate School for the full programme fees and 
-                        therefore undertake to pay the full programme fees on or before the due dates, when registering.
-                    </li>                    
-                    <li>
-                        I understand and accept that should I withdraw from the programme at any time, I wwill five written notice of my intention and immediately pay all monies due.
-                    </li>
-                    <li>I have read and accept the terms and conditions</li>
+                        therefore undertake to pay the full programme fees on or before the due dates, when registering.</p>
+                </li>                    
+                <li>
+                    <p>I understand and accept that should I withdraw from the programme at any time, I wwill five written notice of my intention and immediately pay all monies due.</p>
+                </li>
+                <li><p>I have read and accept the terms and conditions</p></li>
+            </ul>
+            <h5>IMPORTANT: I understand and accpet that for each semester a separate Registration Form must be completed.</h5>
+        </fieldset>
+        
+
+        
+        <fieldset>
+            <h2>Part 3: Student Declaration of Programme</h2>
+            <p>I, <span id="consentFname">_______</span><span id="consentLname"> __________</span> second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp <label id="FirstName"></label> &nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
+            <p>
+                <ul>
+                    <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>
                 </ul>
-                <h5>IMPORTANT: I understand and accpet that for each semester a separate Registration Form must be completed.</h5>
-            </form>
+            </p>   
+        </fieldset>                             
+        
 
-            <form action="">
-                <h2>Part 3: Student Declaration of Programme</h2>
-                <p>I, <span id="consentFname">first</span>&nbsp<span id="consentLname">second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp <label id="FirstName"></label> &nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
-                <p>
-                    <ul>
-                        <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>
-                    </ul>
-                </p>                
-                             
-            </form>
+        
+        <h4>OFFICE USE</h4>
+        <fieldset>
+            <div>
+                <ul class="office-list sep_under">
+                    <li>
+                        <label for="staffName">IMM GS staff member name and surname:</label>
+                    </li>
+                    <li>
+                        <input type="text" name="staffName" id="staffName" class="secA fill">
+                    </li>
+                    <li>
+                        <label for="officeDate">Date</label>                            
+                    </li>
+                    <li>
+                        <input type="date" name="officeDate" id="officeDate" class="secA fill">
+                    </li>
+                    <li>
+                        <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>                           
+                    </li>
+                    <li>
+                        <input type="file" name="consent" id="consent" class="file"> 
+                    </li>
+                </ul>
+            </div>
 
-            <form action="">
-                <h4>OFFICE USE</h4>
-                <div>
-                    <ul class="office-list sep_under">
-                        <li>
-                            <label for="staffName">IMM GS staff member name and surname:</label>
-                        </li>
-                        <li>
-                            <input type="text" name="staffName" id="staffName" class="secA">
-                        </li>
-                        <li>
-                            <label for="officeDate">Date</label>                            
-                        </li>
-                        <li>
-                            <input type="date" name="officeDate" id="officeDate" class="secA">
-                        </li>
-                        <li>
-                            <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>                           
-                        </li>
-                        <li>
-                            <input type="file" name="consent" id="consent" class="file"> 
-                        </li>
-                    </ul>
-                </div>
+            <br><br>
 
-                <br><br>
-
-                <h4>COMMENTS</h4>
-                <textarea style="
-                    width: 99.7%;border: none;
-                    border-radius: 7px;
-                    border-bottom: solid 2px;
-                    opacity: 0.7;"
-                    name="comments" id="comments" rows="8">
-                </textarea>
-                <div id="submitdiv">
-                    <button type="submit" id="submitbtn">Submit</button>
-                </div>
-                
-            </form>            
-        </div>
+            <h4>COMMENTS</h4>
+            <textarea style="
+                width: 99.7%;border: none;
+                border-radius: 7px;
+                border-bottom: solid 2px;
+                opacity: 0.7;"
+                name="comments" id="comments" rows="8">
+            </textarea>
+            <div id="submitdiv">
+                <button type="submit" id="submitbtn">Submit</button>
+            </div>
+        </fieldset>
+            
+                    
     </div>
+</div>
         
     <footer>
         <h4>Student Support Centres and Regional Offices</h4>

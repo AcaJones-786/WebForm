@@ -2,8 +2,21 @@
 .wrapper{
     border: solid 3px;
 }
+fieldset{
+    border: none;
+}
 @media screen and (max-width: 720px){
-    body{
+    .wrapper{
+        border-radius: 15px;
+    }
+    #main_header{
+        font-size: 30px;
+    }
+    p, label, li{
+        font-size: 18px;
+    }
+    h3{
+        font-size: 25px;
     }
     .header>img{
         width: 100%;
@@ -63,16 +76,58 @@
         border-radius: 7px;
         border-bottom: solid 2px;
         opacity: 0.7;
-        height: 3em;
+        height: 2em;
     }
     .secA:focus{
         opacity: 1;
+    }
+    .file{
+        margin: 1em 0 4em 0;
+        padding: 5px;
+    }
+    #ethnicity, #gce{
+        width: 99%;
+    }
+    .txtarea{
+        border: none;
+        border-radius: 7px;
+        border-bottom: solid 2px;
+        opacity: 0.7;
+        width: 99%;
+    }
+    .fill{
+        width: 99%;
+    }
+    h5{
+        font-size: 14px;
+    }
+    h6{
+        font-size: 13px;
+    }
+    
+    i{
+        font-size: 15px;
+        margin: 1em 0;
+    }
+    .u-list{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #confirm_btn{
+        float: left;
+    }
+    #other{
+        width: 100%;
     }
 }
 @media screen and (min-width: 720px) {
     body{
         padding: 1em;
     }
+    .wrapper, header, footer{
+        
+    }
+    
     .header{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -171,6 +226,28 @@
         opacity: 0.7;
         width: 30em;
     }
+    p{
+        font-size: 18px;
+    }
+    h5{
+        font-size: 18px;
+    }
+    h6{
+        font-size: 16px;
+    }    
+    i{
+        font-size: 15px;
+        margin: 1em 0;
+    }
+}
+.titleHeading{
+    display:grid;
+    align-items: center;
+    justify-content: center;
+}
+.titleHeading>h1{
+    margin-bottom: 0;
+    font-size: 2.5em;
 }
 .wrapper{
     background-color: #b8d7f6;
@@ -227,11 +304,4 @@ td > input{
     background-color: whitesmoke;
     color: #0C4B88;
 }
-table{
-    
-}
-
-
-
-
 
