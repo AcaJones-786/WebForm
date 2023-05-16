@@ -1,26 +1,26 @@
-
 function addYearToSpan() {
     const spanElement = document.getElementById("year");
     const currentYear = new Date().getFullYear();
     spanElement.textContent = currentYear;
 }
-var welcomeSpan = document.getElementById('hi')
 function getValue() {
     const radioValue = document.querySelector('input[name="student_type"]:checked').value;
-    const elements = document.getElementsByClassName('hide');
+    const hide_element = document.getElementsByClassName('hide');
+    const reveal_element = document.getElementsByClassName('reveal');
+
     console.log(radioValue);
 
     if (radioValue === 'newST') {        
-        for (let i = 0; i < elements.length; i++) {
-          elements[i].style.display = 'none';
+        for (let i = 0; i < hide_element.length; i++) {
+          hide_element[i].style.display = 'none';
+          reveal_element[i].style.display = 'block';
         }
-        welcomeSpan.style.display='grid';
     }
     else if (radioValue === 'oldST'){
-        for (let i = 0; i < elements.length; i++) {
-            elements[i].style.display = 'block';
+        for (let i = 0; i < hide_element.length; i++) {
+            hide_element[i].style.display = 'block';
+            reveal_element[i].style.display = 'none';
         }
-        welcomeSpan.style.display='none';
     }
 }
 
@@ -234,4 +234,13 @@ function SortYear(year){
         document.getElementById('eight').value="----";
     }
 }
+
+
+
+
+
+
+
+
+
 

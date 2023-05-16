@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
     <script src="script/scipt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body onload="addYearToSpan()">
     <header>
@@ -21,13 +22,12 @@
             <fieldset>
                 <p>Are you a new student?</p>
                 <ul class="u-list">
-                    <li>
+                    <li id="student_block">
                         <label for="newStudrad">New Student</label>
                         <input type="radio" name="student_type" value="newST" id="newStudrad">
                         <label for="renewStudrad">Renewal Student</label>
                         <input type="radio" name="student_type" value="oldST" id="renewStudrad">                        
                     </li>
-                    <li><button id="confirm_btn" onclick="getValue()">Confirm</button></li>
                     <li class="hide">
                         <label for="studNo">Enter student number:</label>
                         <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo">
@@ -39,14 +39,21 @@
                             <option value="2">2</option>
                         </select>
                     </li>
-                </ul>
-                <span style="display: none;" id="hi">Welcome prospective student!</span>
+                    <li class="reveal">
+                        <label for="Fname">First Name:</label>
+                        <input type="text" name="Fname" id="Fname">
+                    </li>
+                    <li class="reveal">
+                        <label for="Lname">Surname</label>
+                        <input type="text" name="Lname" id="Lname">
+                    </li>
+                </ul><button id="confirm_btn" onclick="getValue()">Confirm</button>
             </fieldset>
         </form>
     </header>
 
     <div class="wrapper">
-<form action="">
+<form action="" onsubmit="return false">
     <hr>
     <p style="margin-bottom: 1em;">This registration form consists of three parts;</p>
     <ul>            
@@ -297,18 +304,12 @@
                 <section>
                     <div style="margin-top: 20px;" class="sep_under">
                         <label for="comms"><i>Choose the communication channel for receiving general notifications: &nbsp&nbsp&nbsp </i></label>
-                        <div class="disp-inline">                            
-                            <label for="sms">SMS</label>
-                            <input type="checkbox" name="comms" id="sms">
-                        </div>
-                        <div class="disp-inline">                             
-                            <label for="email">Email</label>
-                            <input type="checkbox" name="comms" id="email">
-                        </div>
-                        <div class="disp-inline">
-                            <label for="both">Both</label>
-                            <input type="checkbox" name="comms" id="both">
-                        </div>                  
+                        <select name="comms" id="comms" class="secA">
+                            <option value="">--select--</option>
+                            <option value="sms">SMS</option>
+                            <option value="email">Email</option>
+                            <option value="both">Both</option>
+                        </select>
                     </div>
                     <div class="sep_under">
                         <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only: &nbsp&nbsp&nbsp</i></label>
@@ -557,11 +558,14 @@
             </ol>
 
             <p>I <span id="consentFname">_______</span><span id="consentLname"> __________</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
+            <hr>
             <div class="signature">
                 <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                <input type="file" name="consent" id="consent" class="file">   
-            </div>                
-
+                <input type="file" name="consent" id="consent" class="file">
+                
+            </div>
+            <div><span>&nbspor fill in the following:</span></div>
+            
             <hr>
 
             <h5>General Declaration</h5>
@@ -737,5 +741,6 @@
         }        
     </script>
     <script src="script/script2.js"></script>
+    
 </body>
 </html>

@@ -32,8 +32,14 @@ fieldset{
         float: right;
     }
     #studNoIpt{
+        display: block;        
+    }
+    #studNoIpt{
         width: 10em;
         margin: 1em 0 1em 0;
+    }
+    #renewStudrad, #newStudrad:active{
+        padding-bottom: 2em;
     }
     .file{
         margin-bottom: 1em;
@@ -119,6 +125,14 @@ fieldset{
     #other{
         width: 100%;
     }
+    #student_block{
+        background-color: #b8d7f6; 
+        padding: 4px; 
+        border-radius: 15px;
+    }
+    td{
+        width: max-content;
+    }
 }
 @media screen and (min-width: 720px) {
     body{
@@ -169,9 +183,6 @@ fieldset{
     .raise-lbl{
         vertical-align: top;
     }
-    .disp-inline{
-        display: inline;
-    }
     .banking-details{
         border: solid 3px;
         display: inline-block;
@@ -183,8 +194,6 @@ fieldset{
         padding: 15px;
     }
     .signature{
-        border: solid  1px;
-        border-radius: 10px;
         padding: 5px;
         display: inline;
     }
@@ -282,10 +291,11 @@ td{
     padding: 3px;
 }
 td > input{
-    width: 24%;
+    width: 99%;
     height: 1cm;
     font-size: small;
     border-radius: 7px;
+    margin-bottom: 0.5em;
 }
 .hide{
     display: none;
@@ -308,3 +318,32 @@ td > input{
     color: #0C4B88;
 }
 
+
+
+
+
+
+
+
+canvas#signature-pad {
+    background: #fff;
+    width: 18em;
+    height: 7em;
+    cursor: crosshair;
+    margin: 2em 0;
+    border: solid 2px #0C4B88;
+    border-radius: 15px;
+
+}
+button#clear, button#save {
+    background: #438dd6;
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+}
+button#clear span, button#save span {
+    display: block;
+    padding: 0.5em 1em;
+}
