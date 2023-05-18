@@ -5,12 +5,18 @@
 fieldset{
     border: none;
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 500px){
     .wrapper{
         border-radius: 15px;
     }
     #main_header{
         font-size: 30px;
+    }
+    #spacing{
+        display: flex;
+    }
+    #Fname{
+        
     }
     p, label, li{
         font-size: 18px;
@@ -43,7 +49,7 @@ fieldset{
     }
     .file{
         margin-bottom: 1em;
-        width: 100%;
+        width: 95%;
         border-bottom: solid 2px;
     }
     .sep_under{
@@ -52,6 +58,12 @@ fieldset{
         background-color: rgb(210, 236, 247);
         padding: 3px;
         border-radius: 8px;
+    }
+    #space_under{
+        margin-bottom: 1em;
+    }
+    .label_right{
+        display: block;
     }
     .banking-details{
         border: solid 2px;
@@ -88,7 +100,7 @@ fieldset{
         opacity: 1;
     }
     .file{
-        margin: 1em 0 4em 0;
+        margin-top: 1.5em;
         padding: 5px;
     }
     #ethnicity, #gce{
@@ -110,7 +122,9 @@ fieldset{
     h6{
         font-size: 13px;
     }
-    
+    .stretch{
+        width: 98%;
+    }
     i{
         font-size: 15px;
         margin: 1em 0;
@@ -126,7 +140,6 @@ fieldset{
         width: 100%;
     }
     #student_block{
-        background-color: #b8d7f6; 
         padding: 4px; 
         border-radius: 15px;
     }
@@ -134,7 +147,7 @@ fieldset{
         width: max-content;
     }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1030px) {
     body{
         padding: 1em;
     }
@@ -172,10 +185,6 @@ fieldset{
         grid-row-gap: 10px;
         grid-column-gap: 10vw;
     }
-    .legislation-req{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
     .input{
         float: right;
     }
@@ -187,7 +196,6 @@ fieldset{
         border: solid 3px;
         display: inline-block;
         padding: 7px;
-        list-style: circle;
     }
     .banking-details> ul{
         margin: 0;
@@ -196,6 +204,10 @@ fieldset{
     .signature{
         padding: 5px;
         display: inline;
+    }
+    .legislation_req{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
     .office-list{
         list-style: none;
@@ -224,6 +236,9 @@ fieldset{
     .secA:focus{
         opacity: 1;
     }
+    .tblInputs{
+        width: 48%;
+    }
     .txtarea{
         border: none;
         border-radius: 7px;
@@ -238,6 +253,18 @@ fieldset{
         opacity: 0.7;
         width: 30em;
     }
+    .space_under{
+        margin-bottom: 0.5em;
+    }
+    .label_right{
+        display: flex;
+        flex-direction: row;
+        width: 5cm;
+    }
+    .long_lbl{
+        display: inline-flex;
+        width: 50%;
+    }
     p{
         font-size: 18px;
     }
@@ -250,6 +277,12 @@ fieldset{
     i{
         font-size: 15px;
         margin: 1em 0;
+    }
+    .sep_under1{
+        margin-bottom: 0.5em;
+        background-color: rgb(210, 236, 247);
+        padding: 5px;
+        border-radius: 8px;
     }
 }
 .titleHeading{
@@ -321,7 +354,9 @@ td > input{
 
 
 
-
+.banking-details:hover{
+    
+}
 
 
 
@@ -347,3 +382,4 @@ button#clear span, button#save span {
     display: block;
     padding: 0.5em 1em;
 }
+

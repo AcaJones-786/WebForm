@@ -3,12 +3,18 @@ function addYearToSpan() {
     const currentYear = new Date().getFullYear();
     spanElement.textContent = currentYear;
 }
+
+//Copy Banking Details
+function copyBankAccountNo(){
+    navigator.clipboard.writeText('4056310798');
+    alert('Account Number: 4056310798   Copied!')
+}
+
+//Change between new and old student
 function getValue() {
     const radioValue = document.querySelector('input[name="student_type"]:checked').value;
     const hide_element = document.getElementsByClassName('hide');
     const reveal_element = document.getElementsByClassName('reveal');
-
-    console.log(radioValue);
 
     if (radioValue === 'newST') {        
         for (let i = 0; i < hide_element.length; i++) {
@@ -23,6 +29,12 @@ function getValue() {
         }
     }
 }
+const radioInputs = document.querySelectorAll('input[name="student_type"]');
+radioInputs.forEach((input) => {
+    input.addEventListener('change', getValue);
+});
+
+
 
 //Okay so we have to include multiple years, i was thinking maybe we could do it
 //by like having buttons at the top above semester 1 that seperate the years.

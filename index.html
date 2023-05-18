@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="script/scipt.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.5/signature_pad.min.js" integrity="sha512-kw/nRM/BMR2XGArXnOoxKOO5VBHLdITAW00aG8qK4zBzcLVZ4nzg7/oYCaoiwc8U9zrnsO9UHqpyljJ8+iqYiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="icon" href="images/imm_favicon.png">
+
 </head>
 <body onload="addYearToSpan()">
     <header>
@@ -21,12 +21,12 @@
         <form action="" onsubmit="return false;" id="introfrm">
             <fieldset>
                 <p>Are you a new student?</p>
-                <ul class="u-list">
+                <ul class="u-list sep_under1">
                     <li id="student_block">
-                        <label for="newStudrad">New Student</label>
-                        <input type="radio" name="student_type" value="newST" id="newStudrad">
-                        <label for="renewStudrad">Renewal Student</label>
-                        <input type="radio" name="student_type" value="oldST" id="renewStudrad">                        
+                        <label for="newStudrad">New Student<input type="radio" name="student_type" value="newST" id="newStudrad" checked="checked"></label>
+                        
+                        <label for="renewStudrad">Renewal Student<input type="radio" name="student_type" value="oldST" id="renewStudrad">  </label>
+                                              
                     </li>
                     <li class="hide">
                         <label for="studNo">Enter student number:</label>
@@ -39,15 +39,15 @@
                             <option value="2">2</option>
                         </select>
                     </li>
-                    <li class="reveal">
-                        <label for="Fname">First Name:</label>
+                    <li class="reveal sep_under">
+                        <label id="spacing" for="Fname">First Name:</label>
                         <input type="text" name="Fname" id="Fname">
                     </li>
-                    <li class="reveal">
-                        <label for="Lname">Surname</label>
+                    <li class="reveal sep_under">
+                        <label id="spacing" for="Lname">Surname:</label>
                         <input type="text" name="Lname" id="Lname">
                     </li>
-                </ul><button id="confirm_btn" onclick="getValue()">Confirm</button>
+                </ul>
             </fieldset>
         </form>
     </header>
@@ -94,16 +94,16 @@
             </h5>
             <h5>All Students</h5>
             <h6><i>*Renewal students need to only upload their proof of payment</i></h6>
-            <ul class="file-list">
-                <li>
+            <ul class="file-list sep_under1">
+                <li class="sep_under">
                     <label for="pop">Proof of payment (as indicated in Section B: Payment Details)</label>
                     <input type="file" name="pop" id="pop" class="input file">
                 </li>
-                <li>
+                <li class="sep_under">
                     <label for="id">Certified copy of ID Document</label>
                     <input type="file" name="id" id="iD" class="input file">
                 </li>
-                <li>
+                <li class="sep_under">
                     <label for="cert">Certified copy of highest schooling certificate (e.g. NSC), as well as any additional academic qualifications</label>
                     <input type="file" name="cert" id="cert" class="input file">
                 </li>
@@ -111,17 +111,17 @@
             <hr>
             <h5>Foreign Students</h5>
             <h6><i>*Renewal students need to only upload their relevant permit</i></h6>
-            <ul class="file-list">
-                <li>
+            <ul class="file-list sep_under1">
+                <li class="sep_under">
                     <label for="gsce">GSCE / GCE other, namely</label>
                     <input type="text" name="gce" id="gce" class="secA">
                     <input type="file" name="gsce" id="gsce" class="input file">
                 </li>
-                <li>
+                <li class="sep_under">
                     <label for="saqa">Certified copy of SAQA evaluation certificate (if writing examinations in South Africa)</label>
                     <input type="file" name="saqa" id="saqa" class="input file">
                 </li>
-                <li>
+                <li class="sep_under">
                     <label for="permit">Relevant permit (if attending tutorials in South Africa)</label>
                     <input type="file" name="permit" id="permit" class="input file">
                 </li>
@@ -133,11 +133,11 @@
         <form action="" onsubmit="return false;">
             <h3>Section A: Personal Details (All Students)</h3>
             <fieldset>
-                <section class="personal-details">
+                <section class="personal-details sep_under1">
                     <div class="sep_under">
                         <label for="title">Title</label>
                         <select name="title" id="title" class="input secA">
-                            <option value="">---select---</option>
+                            <option value="" hidden selected>---select---</option>
                             <option value="Prof">Prof</option>
                             <option value="Dr">Dr</option>
                             <option value="Mr">Mr</option>
@@ -210,7 +210,7 @@
 
             <h3>Address Details (new students only, unless details changed)</h3>
             <fieldset>
-                <section class="address-details">
+                <section class="address-details sep_under1">
                     <div class="sep_under">
                         <label for="paddress" class="raise-lbl">Postal Address</label>
                         <textarea class="input txtarea" name="paddress" id="paddress" cols="50" rows="2"></textarea>
@@ -225,7 +225,7 @@
 
             <h3>Work Details (new students only, unless details changed)</h3>
             <fieldset>
-                <section class="work-details">
+                <section class="work-details sep_under1">
                     <div class="sep_under">
                         <label for="occupation">Occupation</label>
                         <input type="text" name="occupation" id="occupation" class="input secA">
@@ -247,10 +247,10 @@
 
         <h3>Legislation Requirements (new students only, unless details changed)</h3>
             <fieldset>
-                <div>
+                <div class="sep_under1">
                     <label for="ethnicity">*Ethnic Group</label>
                     <select name="ethnicity" id="ethnicity" class="secA">
-                        <option value="">---choose---</option>
+                        <option value="" hidden selected>---choose---</option>
                         <option value="Black">Black</option>
                         <option value="Coloured">Coloured</option>
                         <option value="Indian">Indian</option>
@@ -261,7 +261,7 @@
                     *As required by the Department of Higher Education and Training to allow the IMM Graduate School
                     and the government to track progress of the transformation of Further & Higher Education.
                 </p>
-                <section class="legislation-req">
+                <section class="legislation-req sep_under1">
                     <div class="sep_under">
                         <label for="lang">Home Language<br></label>
                         
@@ -278,87 +278,77 @@
                         
                         <textarea name="details" id="details" cols="35" rows="2" class="txtarea"></textarea>
                     </div>    
-                </section>
-                
+                </section>                
 
                 <h3>Legislation Requirements (foreign students only)</h3>
                 <p>
                     Work / Study permit/temporary resident permits and permanent resident permits are the only permits students can use to write examinations in South Africa. If you are not a South 
                     African citizen and you are writing examinations in South Africa, please state the following:
                 </p>
-                <section class="legislation-req">
-                    <div class="sep_under">
-                        <label for="permitNo">Permit Number</label>
-                        <input type="number" name="permitNo" id="permitNo" class="secA">
-                    </div>
-                    <div class="sep_under">
-                        <label for="type">Type of Permit</label>
-                        <input type="number" name="type" id="type" class="secA">
-                    </div>
-                    <div class="sep_under">
-                        <label for="expDate">Permit Expiry Date</label>
-                        <input type="date" name="expDate" id="expDate" class="secA">
-                    </div>
-                </section>
-                
-                <section>
-                    <div style="margin-top: 20px;" class="sep_under">
-                        <label for="comms"><i>Choose the communication channel for receiving general notifications: &nbsp&nbsp&nbsp </i></label>
-                        <select name="comms" id="comms" class="secA">
-                            <option value="">--select--</option>
-                            <option value="sms">SMS</option>
-                            <option value="email">Email</option>
-                            <option value="both">Both</option>
-                        </select>
-                    </div>
-                    <div class="sep_under">
-                        <label for="hear">WHERE DID YOU HEAR ABOUT THE IMM Graduate School? <i>New students only: &nbsp&nbsp&nbsp</i></label>
-                        <div>
-                            <label for="ad">Advertisements</label>
-                            <input type="checkbox" name="hear" id="ad">
-                        </div>
-                        <div>
-                            <label for="word">Word of Mouth</label>
-                            <input type="checkbox" name="hear" id="word">
-                        </div>
-                        <div>
-                            <label for="web">Website</label>
-                            <input type="checkbox" name="hear" id="web">  
-                        </div>
-                        <div>
-                            <label for="other">Other</label>
-                            <input type="text" name="hear" id="other" class="secA gce">
-                        </div>             
-                    </div>
-
-                </section>
-
-                <div>
-                    <p>Where did you attend school?</p>
-                    <section class="legislation-req">
-                        <div class="sep_under">
-                            <label for="sName">School Name</label>
-                            <input type="text" name="sName" id="sName" class="secA">
-                        </div>
-                        <div class="sep_under">
-                            <label for="suburb">Suburb</label>
-                            <input type="text" name="suburb" id="suburb" class="secA">
-                        </div>
-                        <div class="sep_under">
-                            <label for="city">City</label>
-                            <input type="text" name="city" id="city" class="secA">
-                        </div>                   
-                    </section>
+                <div style="margin: 20px 0;" class="sep_under sep_under1">
+                    <label class="long_lbl" for="comms">Choose the communication channel for receiving general notifications: &nbsp&nbsp&nbsp</label>
+                    <select name="comms" id="comms" class="secA">
+                        <option value="" hidden selected>--select--</option>
+                        <option value="sms">SMS</option>
+                        <option value="email">Email</option>
+                        <option value="both">Both</option>
+                    </select>
                 </div>
+                <div class="sep_under sep_under1">
+                    <label class="long_lbl" for="find">Where did you hear about the IMM Graduate School? </label>
+                    <select name="find" id="find" class="secA">
+                        <option value="" hidden selected>--select--</option>
+                        <option value="ads">Adverstisements</option>
+                        <option value="word">Word of Mouth</option>
+                        <option value="web">Webiste</option>
+                        <option value="other">Other</option>
+                    </select>                    
+                </div>
+                <br><br>
+                <section class="legislation_req sep_under1">
+                    <section class="sep_under">
+                        <p>Permit Details:</p>
+                        <div class="space_under">
+                            <label class="label_right" for="permitNo">Permit Number</label>
+                            <input type="number" name="permitNo" id="permitNo" class="secA stretch">
+                        </div>
+                        <div class="space_under">
+                            <label class="label_right" for="type">Type of Permit</label>
+                            <input type="number" name="type" id="type" class="secA stretch">
+                        </div>
+                        <div class="space_under">
+                            <label class="label_right" for="expDate">Permit Expiry Date</label>
+                            <input type="date" name="expDate" id="expDate" class="secA stretch">
+                        </div>
+                    </section>
+                    <section class="sep_under">
+                        <p>Where did you attend school?:</p>
+                        <section>
+                            <div class="space_under">
+                                <label class="label_right" for="sName">School Name</label>
+                                <input type="text" name="sName" id="sName" class="secA stretch">
+                            </div>
+                            <div class="space_under">
+                                <label class="label_right" for="suburb">Suburb</label>
+                                <input type="text" name="suburb" id="suburb" class="secA stretch">
+                            </div>
+                            <div class="space_under">
+                                <label class="label_right" for="city">City</label>
+                                <input type="text" name="city" id="city" class="secA stretch">
+                            </div>                   
+                        </section>
+                    </section>
+                </section>
             </fieldset>
 
             <h3>Section B: Payment Details</h3>
             
             <fieldset>
-                <h6>NOTE <br>NO CASH PAYMENTS ARE ACCEPTED AT ANY IMM Graduate School OFFICE</h6>
-                <div class="sep_under">
+                <h6>NOTE: <br>NO CASH PAYMENTS ARE ACCEPTED AT ANY IMM Graduate School OFFICE</h6>
+                <div class="sep_under sep_under1">
                     <label for="proofpayment">The following proof of payment uploaded is:</label>
                     <select name="proofpayment" id="proofpayment" class="secA">
+                        <option value="" hidden selected>--select--</option>
                         <option value="Credit">Credit / Direct Deposity (at IMM GS Office)</option>
                         <option value="Direct">Direct Deposit</option>
                         <option value="EFT">EFT / e-payment</option>
@@ -368,7 +358,7 @@
                 </div>
                 <aside>
                     <h5 style="font-size: larger; margin-top: 1em;">Bank Details</h5>
-                    <div class="banking-details">
+                    <div class="banking-details" onclick="copyBankAccountNo()">
                         <ul>
                         <li>Account Name:  IMM GSM (PTY) Ltd</li>
                         <li>Bank: ABSA Commercial Banking</li>
@@ -559,15 +549,12 @@
 
             <p>I <span id="consentFname">_______</span><span id="consentLname"> __________</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
             <hr>
-            <div class="signature">
+            <div class="signature sep_under1">
                 <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                <input type="file" name="consent" id="consent" class="file">
+                <input type="file" name="consent" id="consent" class="file sep_under">
                 
-            </div>
-            <div><span>&nbspor fill in the following:</span></div>
-            
+            </div>            
             <hr>
-
             <h5>General Declaration</h5>
             <ul>
                 <li>I have read the IMM Graduate School Prospectus and Yearbook.</li>
@@ -606,8 +593,9 @@
         
 
         
-        <h4>OFFICE USE</h4>
-        <fieldset>
+        
+        <fieldset class="sep_under1">
+            <h4>OFFICE USE</h4>
             <div>
                 <ul class="office-list sep_under">
                     <li>
