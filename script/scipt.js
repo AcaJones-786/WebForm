@@ -1,3 +1,4 @@
+//Add current year to title
 function addYearToSpan() {
     const spanElement = document.getElementById("year");
     const currentYear = new Date().getFullYear();
@@ -33,6 +34,22 @@ const radioInputs = document.querySelectorAll('input[name="student_type"]');
 radioInputs.forEach((input) => {
     input.addEventListener('change', getValue);
 });
+
+function AutoFillNames(){
+    const firstName = document.getElementById('Fname');
+    const lastName = document.getElementById('Lname');
+
+    var spanElemFname = document.getElementById('consentFname');
+    var spanElemLname = document.getElementById('consentLname');
+    
+    spanElemFname.textContent=firstName;
+    spanElemLname.textContent=lastName;
+}
+const nameFillInput = document.getElementById('Fname');
+nameFillInput.addEventListener('input', (event) => {
+    AutoFillNames();
+})
+
 
 
 

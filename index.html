@@ -12,40 +12,57 @@
 <body onload="addYearToSpan()">
     <header>
         <section class="header">
-            <img id="logo_img" src="images/IMM.png" alt="">
+            <div class="img_div">
+                <img id="logo_img" src="images/IMM.png" alt="">
+            </div>
+            
             <div class="titleHeading">
                 <h1 id="main_header">IMM Graduate School <br> <h3>Registration Form <span id="year"></span></h1>  </h3> 
             </div>                      
         </section>
 
         <form action="" onsubmit="return false;" id="introfrm">
-            <fieldset>
+            <fieldset class="student_fldset">
                 <p>Are you a new student?</p>
                 <ul class="u-list sep_under1">
                     <li id="student_block">
-                        <label for="newStudrad">New Student<input type="radio" name="student_type" value="newST" id="newStudrad" checked="checked"></label>
-                        
-                        <label for="renewStudrad">Renewal Student<input type="radio" name="student_type" value="oldST" id="renewStudrad">  </label>
+                        <span class="stud_arrange">
+                            <label for="newStudrad">New Student<input type="radio" name="student_type" value="newST" id="newStudrad" checked="checked"></label>
+                        </span>
+                        <span class="stud_arrange">
+                            <label for="renewStudrad">Renewal Student<input type="radio" name="student_type" value="oldST" id="renewStudrad">  </label>
+                        </span>
                                               
                     </li>
-                    <li class="hide">
-                        <label for="studNo">Enter student number:</label>
-                        <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo">
+                    <li class="hide sep_under">
+                        <div>
+                            <label for="studNo">Enter student number:</label>
+                            <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo secA">                           
+                        </div>
+ 
                     </li>
-                    <li class="hide">
-                        <label for="sem">Which semester are you registering for?</label> 
-                        <select name="sem" id="sem" class="rightGo">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
+                    <li class="hide sep_under">
+                        <div>                            
+                            <label for="sem">Which semester are you registering for?</label> 
+                            <select name="sem" id="sem" class="rightGo secA">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                            </select>
+                        </div>
                     </li>
                     <li class="reveal sep_under">
-                        <label id="spacing" for="Fname">First Name:</label>
-                        <input type="text" name="Fname" id="Fname">
+                        <div>
+                            <label id="spacing" for="Fname">First Name:</label>
+                            <input type="text" name="Fname" id="Fname" class="secA">                            
+                        </div>
+
                     </li>
                     <li class="reveal sep_under">
-                        <label id="spacing" for="Lname">Surname:</label>
-                        <input type="text" name="Lname" id="Lname">
+                        <div>
+                            <label id="spacing" for="Lname">Surname:</label>
+                            <input type="text" name="Lname" id="Lname" class="secA">
+                        </div>
+
                     </li>
                 </ul>
             </fieldset>
@@ -357,7 +374,7 @@
                     <input style="display: none; width: max-content;" type="number" name="creds" id="creds" class="secA" placeholder="R0.00">       
                 </div>
                 <aside>
-                    <h5 style="font-size: larger; margin-top: 1em;">Bank Details</h5>
+                    <h5 style="font-size: larger; margin-top: 1em;">Bank Details <i>(click block to copy)</i></h5>
                     <div class="banking-details" onclick="copyBankAccountNo()">
                         <ul>
                         <li>Account Name:  IMM GSM (PTY) Ltd</li>
@@ -551,7 +568,7 @@
             <hr>
             <div class="signature sep_under1">
                 <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
-                <input type="file" name="consent" id="consent" class="file sep_under">
+                <input type="file" name="consent" id="consent" class="file">
                 
             </div>            
             <hr>

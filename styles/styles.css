@@ -1,22 +1,24 @@
-
 .wrapper{
     border: solid 3px;
+    background-color: #b8d7f6;
+    padding: 5px;
+    border-radius: 15px;
 }
 fieldset{
     border: none;
 }
-@media screen and (max-width: 500px){
-    .wrapper{
-        border-radius: 15px;
-    }
+.student_fldset{
+    border: solid 3px;
+    background-color: #b8d7f6;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+@media screen and (max-width: 750px){    
     #main_header{
         font-size: 30px;
     }
     #spacing{
         display: flex;
-    }
-    #Fname{
-        
     }
     p, label, li{
         font-size: 18px;
@@ -29,6 +31,11 @@ fieldset{
     }
     .header{
         text-align: center;
+        border-radius: 15px;
+    }
+    .img_div{
+        background-color: #0C4B88;
+        border-radius: 15px;
     }
     ul, ol{
         list-style: none;
@@ -68,6 +75,9 @@ fieldset{
     .banking-details{
         border: solid 2px;
         padding: 0 1em;
+    }
+    .banking-details>ul>li{
+        font-size: 17px;
     }
     .prgInput{
         width: 100%;
@@ -147,12 +157,9 @@ fieldset{
         width: max-content;
     }
 }
-@media screen and (min-width: 1030px) {
+@media screen and (min-width: 750px) {
     body{
         padding: 1em;
-    }
-    .wrapper, header, footer{
-        
     }
     #logo_img{
         border-radius: 25px;
@@ -285,6 +292,41 @@ fieldset{
         border-radius: 8px;
     }
 }
+@media only screen and (min-width: 501px) and (max-width: 1029px) {
+	.header{
+        margin-bottom: 1em;
+    }
+    .img_div{
+        background-color: #0C4B88;   
+        border-radius: 15px; 
+    }
+    #logo_img{
+        width: 7cm;
+    }
+    #main_header{
+        font-size: xx-large;
+    }
+    .stud_arrange{
+        display: block;
+    }
+    .sep_under{
+        display: grid;
+    }
+    .sep_under1{
+        margin-bottom: 0.5em;
+        background-color: rgb(210, 236, 247);
+        padding: 5px;
+        border-radius: 8px;
+    }
+    .file{
+        border-bottom: solid 2px;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+    }
+    p{
+        font-size: 16px;
+    }
+}
 .titleHeading{
     display:grid;
     align-items: center;
@@ -293,11 +335,6 @@ fieldset{
 .titleHeading>h1{
     margin-bottom: 0;
     font-size: 2.5em;
-}
-.wrapper{
-    background-color: #b8d7f6;
-    padding: 5px;
-
 }
 h2, h3{
     text-align: center;
@@ -351,25 +388,17 @@ td > input{
     color: #0C4B88;
 }
 
-
-
-
+/* Hover effect for copying bank account no. */
 .banking-details:hover{
-    
+    cursor: alias;
+    border: solid 3px grey;
+    background-color: #0C4B88;
+    color: whitesmoke;
 }
 
 
 
-canvas#signature-pad {
-    background: #fff;
-    width: 18em;
-    height: 7em;
-    cursor: crosshair;
-    margin: 2em 0;
-    border: solid 2px #0C4B88;
-    border-radius: 15px;
 
-}
 button#clear, button#save {
     background: #438dd6;
     border: 1px solid transparent;
