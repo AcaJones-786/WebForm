@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="images/imm_favicon.png">
-
 </head>
 <body onload="addYearToSpan()">
     <header>
@@ -37,7 +36,7 @@
                     <li class="hide sep_under">
                         <div>
                             <label for="studNo">Enter student number:</label>
-                            <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="rightGo secA">                           
+                            <input type="number" name="studNo" id="studNoIpt" maxlength="6" class="secA">                           
                         </div>
  
                     </li>
@@ -84,8 +83,10 @@
         </p>
     <hr>
     <div>
+        
+        <h2>Part 1</h2>
         <fieldset>
-            <h2>Part 1</h2>
+            
             <h5>
                 PLEASE READ THE FOLLOWING INSTRUCTIONS BEFORE COMPLETING THIS FORM
             </h5>
@@ -147,8 +148,9 @@
         <hr>
     </div>
     <div>
+        <h3>Section A: Personal Details (All Students)</h3>
         <form action="" onsubmit="return false;">
-            <h3>Section A: Personal Details (All Students)</h3>
+            
             <fieldset>
                 <section class="personal-details sep_under1">
                     <div class="sep_under">
@@ -172,7 +174,7 @@
                         </select>
                     </div>
                     <div class="sep_under">
-                        <label for="surname">Surname (As per Identity Document)</label>
+                        <label for="surname">Surname (As per ID)</label>
                         <input type="text" name="surname" id="surname" class="input secA">
                     </div>
                     <div class="sep_under">
@@ -180,7 +182,7 @@
                         <input type="text" name="pname" id="pname" class="input secA">
                     </div>
                     <div class="sep_under">
-                        <label for="fname">First Name(s) (As per Identity Document)</label>
+                        <label for="fname">First Name(s) (As per ID)</label>
                         <input type="text" name="fname" id="fname" class="input secA">
                     </div>
                     <div class="sep_under">
@@ -212,7 +214,7 @@
                         <input type="number" name="kin" id="kin" class="input secA">
                     </div>
                     <div class="sep_under">
-                        <label for="email1">Email (1) (Complusory)</label>
+                        <label for="email1">Email (1) (*)</label>
                         <input type="email" name="email1" id="email1" class="input secA">
                     </div>
                     <div class="sep_under">
@@ -450,72 +452,72 @@
             <h3>Section D: Examination Module Details</h3>
             <fieldset>
                 <i>A maximum of four modules may be examined in one examination session</i>
-            <br>
+                <br>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th id="tblHeader" colspan="2">Semester 1</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="text" name="sem1" id="one" placeholder="1" class="tblInputs">
-                            <input type="text" name="sem1" id="two" placeholder="2" class="tblInputs">
-                            <input type="text" name="sem1" id="three" placeholder="3" class="tblInputs">
-                            <input type="text" name="sem1" id="four" placeholder="4" class="tblInputs">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Semester 2</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="sem2" id="five" placeholder="5" class="tblInputs">
-                            <input type="text" name="sem2" id="six" placeholder="6" class="tblInputs">
-                            <input type="text" name="sem2" id="seven" placeholder="7" class="tblInputs">
-                            <input type="text" name="sem2" id="eight" placeholder="8" class="tblInputs"> 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
-            <br><br>
-            <i>A maximum of four modules may be examined in one examination session</i>
-            <br>
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2">Semester 1 (lectures/Tutorial)</th>
-                    </tr>
-                    <tr>
-                        <th colspan="2">SSC or Campus Name:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <input type="text" name="sem1" id="nine" placeholder="1" class="tblInputs">
-                            <input type="text" name="sem1" id="ten" placeholder="2" class="tblInputs">
-                            <input type="text" name="sem1" id="eleven" placeholder="3" class="tblInputs">
-                            <input type="text" name="sem1" id="twelve" placeholder="4" class="tblInputs">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Semester 2 (lectures/Tutorial)</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="text" name="sem2" id="thirteen" placeholder="5" class="tblInputs">
-                            <input type="text" name="sem2" id="fourteen" placeholder="6" class="tblInputs">
-                            <input type="text" name="sem2" id="fifteen" placeholder="7" class="tblInputs">
-                            <input type="text" name="sem2" id="sixteen" placeholder="8" class="tblInputs"> 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <hr>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="tblHeader" colspan="2">Semester 1</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem1" id="one" placeholder="1" class="tblInputs">
+                                <input type="text" name="sem1" id="two" placeholder="2" class="tblInputs">
+                                <input type="text" name="sem1" id="three" placeholder="3" class="tblInputs">
+                                <input type="text" name="sem1" id="four" placeholder="4" class="tblInputs">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Semester 2</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem2" id="five" placeholder="5" class="tblInputs">
+                                <input type="text" name="sem2" id="six" placeholder="6" class="tblInputs">
+                                <input type="text" name="sem2" id="seven" placeholder="7" class="tblInputs">
+                                <input type="text" name="sem2" id="eight" placeholder="8" class="tblInputs"> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
+                <br><br>
+                <i>A maximum of four modules may be examined in one examination session</i>
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2">Semester 1 (lectures/Tutorial)</th>
+                        </tr>
+                        <tr>
+                            <th colspan="2">SSC or Campus Name:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem1" id="nine" placeholder="1" class="tblInputs">
+                                <input type="text" name="sem1" id="ten" placeholder="2" class="tblInputs">
+                                <input type="text" name="sem1" id="eleven" placeholder="3" class="tblInputs">
+                                <input type="text" name="sem1" id="twelve" placeholder="4" class="tblInputs">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Semester 2 (lectures/Tutorial)</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="sem2" id="thirteen" placeholder="5" class="tblInputs">
+                                <input type="text" name="sem2" id="fourteen" placeholder="6" class="tblInputs">
+                                <input type="text" name="sem2" id="fifteen" placeholder="7" class="tblInputs">
+                                <input type="text" name="sem2" id="sixteen" placeholder="8" class="tblInputs"> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr>
             </fieldset>
 
         
@@ -597,9 +599,9 @@
         </fieldset>
         
 
-        
+        <h2>Part 3: Student Declaration of Programme</h2>
         <fieldset>
-            <h2>Part 3: Student Declaration of Programme</h2>
+            
             <p>I, <span id="consentFname">_______</span><span id="consentLname"> __________</span> second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp <label id="FirstName"></label> &nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
             <p>
                 <ul>

@@ -156,6 +156,9 @@ fieldset{
     td{
         width: max-content;
     }
+    #Fname, #Lname{
+        width: 99%;
+    }
 }
 @media screen and (min-width: 750px) {
     body{
@@ -171,6 +174,7 @@ fieldset{
         background-color: #0C4B88;
         color: whitesmoke;
         border-radius: 15px;
+        margin-bottom: 1em;
     }
     .u-list{
         list-style: none;
@@ -240,6 +244,9 @@ fieldset{
         opacity: 0.7;
         width: 15em;
     }
+    .rightGo{
+        width: 4em;
+    }
     .secA:focus{
         opacity: 1;
     }
@@ -291,11 +298,16 @@ fieldset{
         padding: 5px;
         border-radius: 8px;
     }
+    h2:hover, h3:hover{
+        cursor: pointer;
+    }
+    .panel{
+        display: none;
+        overflow: hidden;
+    }
 }
 @media only screen and (min-width: 501px) and (max-width: 1029px) {
-	.header{
-        margin-bottom: 1em;
-    }
+	
     .img_div{
         background-color: #0C4B88;   
         border-radius: 15px; 
@@ -327,6 +339,13 @@ fieldset{
         font-size: 16px;
     }
 }
+@media screen and (min-width: 1030px){
+    header, .wrapper, footer{
+        width: 80%;
+        margin: auto;
+    }  
+}
+
 .titleHeading{
     display:grid;
     align-items: center;

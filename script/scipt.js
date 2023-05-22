@@ -35,6 +35,27 @@ radioInputs.forEach((input) => {
     input.addEventListener('change', getValue);
 });
 
+//Accordion for sections and parts
+
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+
+
+
+
 function AutoFillNames(){
     const firstName = document.getElementById('Fname');
     const lastName = document.getElementById('Lname');
@@ -49,6 +70,18 @@ const nameFillInput = document.getElementById('Fname');
 nameFillInput.addEventListener('input', (event) => {
     AutoFillNames();
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
