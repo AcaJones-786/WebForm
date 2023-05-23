@@ -431,3 +431,18 @@ button#clear span, button#save span {
     padding: 0.5em 1em;
 }
 
+#btnConfirm{
+    background-color: #b8d7f6;
+    color: #0C4B88;
+    border: solid 1px black;
+    border-radius: 7px;
+    padding: 4px;
+    width: 3cm;
+}
+#btnConfirm:hover{
+    background-color: #0C4B88;
+    color: #b8d7f6;
+}
+#div-btn{
+    text-align: center;
+}

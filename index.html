@@ -416,11 +416,11 @@
                         </select>
                     </div>
                     
-                    <div class="sep_under">
+                    <div class="sep_under sep_under1">
                         <label for="elec">Elective</label>
                         <input type="text" name="elec" id="elec" class="secA">
                     </div>
-                    <div class="sep_under">
+                    <div class="sep_under sep_under1">
                         <label for="otherprogram">Other</label>
                         <input type="text" name="otherprogram" id="otherprogram" class="secA">
                     </div>
@@ -432,7 +432,7 @@
                 <div class="legislation-req">
                     
                                        
-                    <div class="sep_under"><select name="pProgram" id="pProgram" class="prgInput secA">
+                    <div class="sep_under sep_under1"><select name="pProgram" id="pProgram" class="prgInput secA">
                         <option hidden selected>---Choose a programme---</option>
                         <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
                         <option value="mPhilMarketing">MPhil in Marketing</option>
@@ -441,12 +441,15 @@
                         <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>                        
                         <option value="">None</option>
                     </select> </div>
-                    <div class="sep_under">
+                    <div class="sep_under sep_under1">
                         <label for="otherpost">Other</label>
                         <input type="text" name="otherpost" id="otherpost" class="secA">
                     </div>                    
                 </div>
-                <button id="btntest" onclick="setProgramme()">test</button>  
+                <div id="div-btn">
+                    <button id="btnConfirm" onclick="setProgramme()">Confirm</button>                    
+                </div>
+  
             </fieldset>                
 
             <h3>Section D: Examination Module Details</h3>
