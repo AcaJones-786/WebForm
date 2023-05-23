@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IMM Student Registration</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="icon" href="images/imm_favicon.png">
+    <link rel="icon" href="images/imm_favicon.png">    
 </head>
 <body onload="addYearToSpan()">
     <header>
@@ -376,7 +376,7 @@
                     <input style="display: none; width: max-content;" type="number" name="creds" id="creds" class="secA" placeholder="R0.00">       
                 </div>
                 <aside>
-                    <h5 style="font-size: larger; margin-top: 1em;">Bank Details <i>(click block to copy)</i></h5>
+                    <h5 style="font-size: larger; margin-top: 1em;">Bank Details <i>(click below to copy Acc No.)</i></h5>
                     <div class="banking-details" onclick="copyBankAccountNo()">
                         <ul>
                         <li>Account Name:  IMM GSM (PTY) Ltd</li>
@@ -395,8 +395,7 @@
 
             <h3>Section C: Academic Programme Details</h3>
             <fieldset>
-                <p>Please tick the programme for which you wish to register</p>
-                <hr>
+                <p>Please choose the programme for which you wish to register:</p>
                 <label for="uProgram"><b>Undergraduate Programmes</b></label>
                 <br>
                 <div class="legislation-req">                    
@@ -430,17 +429,17 @@
                 <label for="pProgram"><b>Postgraduate Programmes (Only to be completed once a Postgraduate Application has been approved)</b></label>
                 <br>
                 <div class="legislation-req">
-                    
-                                       
-                    <div class="sep_under sep_under1"><select name="pProgram" id="pProgram" class="prgInput secA">
-                        <option hidden selected>---Choose a programme---</option>
-                        <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
-                        <option value="mPhilMarketing">MPhil in Marketing</option>
-                        <option value="singlemoduleEntryPost">Single Module Entry</option>
-                        <option value="bphilmarketingManagementHon">BPhil Honours in Marketing Management</option>
-                        <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>                        
-                        <option value="">None</option>
-                    </select> </div>
+                    <div class="sep_under sep_under1">
+                        <select name="pProgram" id="pProgram" class="prgInput secA">
+                            <option hidden selected>---Choose a programme---</option>
+                            <option value="marketingManagementPost">Postgraduate Diploma in Marketing Management</option>
+                            <option value="mPhilMarketing">MPhil in Marketing</option>
+                            <option value="singlemoduleEntryPost">Single Module Entry</option>
+                            <option value="bphilmarketingManagementHon">BPhil Honours in Marketing Management</option>
+                            <option value="bcomsupplychainManagementPost">BCom Honours in SUpply Chain Management</option>                        
+                            <option value="">None</option>
+                        </select> 
+                    </div>
                     <div class="sep_under sep_under1">
                         <label for="otherpost">Other</label>
                         <input type="text" name="otherpost" id="otherpost" class="secA">
@@ -569,13 +568,13 @@
                 </li>
             </ol>
 
-            <p>I <span id="consentFname">_______</span><span id="consentLname"> __________</span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
+            <p>I <span id="fullName1"></span> have read the above examination rules and regulation. I understand what is expected of me during my examinations and acknowledge that actions will be taken should I fail to abide by the above rules and regulations. I am aware that a copy of this document is available on the student portal as well as on the IMM Graduate School's website</p>
             <hr>
             <div class="signature sep_under1">
                 <label for="consent">Student Signature (upload jpeg/jpg/png/etc):</label>
                 <input type="file" name="consent" id="consent" class="file">
                 
-            </div>            
+            </div>   
             <hr>
             <h5>General Declaration</h5>
             <ul>
@@ -605,7 +604,7 @@
         <h2>Part 3: Student Declaration of Programme</h2>
         <fieldset>
             
-            <p>I, <span id="consentFname">_______</span><span id="consentLname"> __________</span> second</span><span id="studNo"></span>, am fully aware that the programme I have enrolled on, is the: &nbsp <label id="FirstName"></label> &nbsp&nbsp and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
+            <p>I, <span id="fullName2"></span>, am fully aware that the programme I have enrolled on, is the: <span id="studNo"></span> and is registered with the Department of Higher Education and Training, as indicated on the registration certificate issued to the IMM Graduate School of Marketing dated:&nbsp <label id="DateToday"></label></p>
             <p>
                 <ul>
                     <li>The IMM Graduate School (IMM) does not endorse third parties who offer tuition on IMM programmes. Should an IMM student enrol with any third party institution on IMM programmes, the IMM will be entitled to suspend the student's registration with the IMM.</li>
@@ -750,7 +749,6 @@
             }
         }        
     </script>
-    <script src="script/script2.js"></script>
     
 </body>
 </html>

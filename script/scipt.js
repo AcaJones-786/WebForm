@@ -1,17 +1,17 @@
-//Add current year to title
+//Add current year to title heading
 function addYearToSpan() {
     const spanElement = document.getElementById("year");
     const currentYear = new Date().getFullYear();
     spanElement.textContent = currentYear;
 }
 
-//Copy Banking Details
+//Click to Copy Banking Details
 function copyBankAccountNo(){
     navigator.clipboard.writeText('4056310798');
     alert('Account Number: 4056310798   Copied!')
 }
 
-//Change between new and old student
+//Change between new and old student input fields
 function getValue() {
     const radioValue = document.querySelector('input[name="student_type"]:checked').value;
     const hide_element = document.getElementsByClassName('hide');
@@ -35,41 +35,90 @@ radioInputs.forEach((input) => {
     input.addEventListener('change', getValue);
 });
 
-//Accordion for sections and parts
 
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-
-
-
-
-
-function AutoFillNames(){
-    const firstName = document.getElementById('Fname');
-    const lastName = document.getElementById('Lname');
-
-    var spanElemFname = document.getElementById('consentFname');
-    var spanElemLname = document.getElementById('consentLname');
+//Auto fill names
+document.addEventListener('DOMContentLoaded', function() {
+    const firstNameInput = document.getElementById('Fname');
+    const lastNameInput = document.getElementById('Lname');
     
-    spanElemFname.textContent=firstName;
-    spanElemLname.textContent=lastName;
-}
-const nameFillInput = document.getElementById('Fname');
-nameFillInput.addEventListener('input', (event) => {
-    AutoFillNames();
-})
+    const nameSpan = document.getElementById('fullName1');
+    const nameSpan2 = document.getElementById('fullName2');
+    
+    
+    lastNameInput.addEventListener('focusout', function() {
+      const value1 = firstNameInput.value;
+      const value2 = lastNameInput.value;
+
+      const final = value1 + ' ' + value2;
+      nameSpan.textContent=final;
+      nameSpan2.textContent=final;
+    });
+});
+
+
+//Autofill course
+document.addEventListener('DOMContentLoaded', function() {
+    const mySelect = document.getElementById('uProgram');
+    const mySelect2 = document.getElementById('pProgram');
+    const resultSpan = document.getElementById('studNo');
+    
+    mySelect.addEventListener('change', function() {
+      const selectedOption = mySelect.value;
+      console.log(selectedOption);
+      if (selectedOption === 'HCMarketing') {
+        resultSpan.textContent = 'Higher Certificate in Marketing';
+      } else if (selectedOption === 'HCProjectManagement') {
+        resultSpan.textContent = 'Higher Certificate in Project Management';
+      } else if (selectedOption === 'HCSupplyChainManagement') {
+        resultSpan.textContent = 'Higher Certificate in Supply Chain Management';
+      } else if (selectedOption === 'DipMarketingManagement'){
+        resultSpan.textContent = 'Diploma in Marketing Management';
+      } else if (selectedOption === 'BComInterSupplyChainManagement'){
+        resultSpan.textContent = 'BCom in International Supply Chain Management';
+      } else if (selectedOption === 'BacMarketingManagementScience'){
+        resultSpan.textContent = 'Bachelor of Commerce in Marketing & Management Science';
+      } else if (selectedOption === 'BacAdminMarketingManagement'){
+        resultSpan.textContent = 'Bachelor of Business Administration on Marketing Management';
+      }
+       else {
+        resultSpan.textContent = ''; 
+      }
+    // });mySelect2.addEventListener('change', function() {
+    //     const selectedOption = mySelect.value;
+    //     console.log(selectedOption);
+    //     if (selectedOption === 'marketingManagementPost') {
+    //       resultSpan.textContent = 'Postgraduate Diploma in Marketing Management';
+    //     } else if (selectedOption === 'mPhilMarketing') {
+    //       resultSpan.textContent = 'MPhil in Marketing';
+    //     } else if (selectedOption === 'singlemoduleEntryPost') {
+    //       resultSpan.textContent = 'Single Module Entry';
+    //     } else if (selectedOption === 'bphilmarketingManagementHon'){
+    //       resultSpan.textContent = 'BPhil Honours in Marketing Management';
+    //     } else if (selectedOption === 'bcomsupplychainManagementPost'){
+    //       resultSpan.textContent = 'BCom Honours in SUpply Chain Management';
+    //     } 
+    //      else {
+    //       resultSpan.textContent = ''; 
+    //     }
+    //   });
+  })
+});
+
+
+
+
+//Accordion
+
+
+
+
+
+
+
+
+
+
+
 
 
 

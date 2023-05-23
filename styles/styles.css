@@ -415,22 +415,6 @@ td > input{
     color: whitesmoke;
 }
 
-
-
-
-button#clear, button#save {
-    background: #438dd6;
-    border: 1px solid transparent;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: 10px;
-}
-button#clear span, button#save span {
-    display: block;
-    padding: 0.5em 1em;
-}
-
 #btnConfirm{
     background-color: #b8d7f6;
     color: #0C4B88;
