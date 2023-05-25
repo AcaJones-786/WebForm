@@ -4,15 +4,6 @@
     padding: 5px;
     border-radius: 15px;
 }
-fieldset{
-    border: none;
-}
-.student_fldset{
-    border: solid 3px;
-    background-color: #b8d7f6;
-    border-radius: 15px;
-    margin-bottom: 1em;
-}
 @media screen and (max-width: 750px){    
     #main_header{
         font-size: 30px;
@@ -344,6 +335,16 @@ fieldset{
         width: 80%;
         margin: auto;
     }  
+}
+
+fieldset{
+    border: none;
+}
+.student_fldset{
+    border: solid 3px;
+    background-color: #b8d7f6;
+    border-radius: 15px;
+    margin-bottom: 1em;
 }
 
 .titleHeading{
